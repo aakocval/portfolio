@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>aakocval - Val Moratalla - Front-end Developer</title>
+    <meta name="description" content="Portfolio of front-end developer Val Moratalla based in Manila — available for opportunities. Loves cool design and animations.">
+    <meta name="author" content="Val Moratalla">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Facebook -->
+    <meta property="og:title" content="aakocval - Val Moratalla - Front-end Developer" />
+    <meta property="og:description" content="Portfolio of front-end developer Val Moratalla based in Manila — available for opportunities. Loves cool design and animations." />
+    <meta property="og:image" content="images/meta.jpg" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/fa-svg-with-js.css">
+    <link href="css/style.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,700" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico?v=2" type="image/x-icon">
+
+</head>
+
+<body ng-app="app" ng-controller="ProjCtrl">
+    <div id="preloader"></div>
+    <div id="main-wrapper">
+        <div id="projects-list">
+            <ul>
+                <li ng-repeat="(key, value) in projects" class="wow {{ value.animName }}" data-wow-delay="{{ value.delay }}" ng-class="{active : activeMenu === value}"><a ng-mouseover="hoverIn(value.name); setActive(value)" ng-click="selected = value; setActive(value,key)"> {{ value.name }}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="cover" ng-class="projName"></div>
+        <div class="shade" ng-class="projName"></div>
+        <div class="v"></div>
+        <a href="index.html" ng-mouseover="hoverOut(); setActive(value)">
+            <img src="images/logo.png" class="logo-colored active wow fadeIn" data-wow-delay="3s">
+        </a>
+        <a class="wow fadeIn about-link" data-wow-delay="3.5s">about</a>
+        <h1 class="sr-only">Val Moratalla</h1>
+    </div>
+
+    <div id="project-cont">
+        <a class="projects-link">projects</a>
+        <div class="container h-100">
+            <img src="images/arrow.svg" class="close-icon" alt="Close Icon" title="back">
+            <div class="row h-100 align-items-center">
+                <div class="col text-white">
+                    <img src="images/logos/{{ current.name }}.png" class="mb-3 mt-md-5 proj-logo" alt="{{ current.name }} Logo">
+                    <hr ng-class="projName">
+                    <p class="h5 mb-4">
+                        {{ current.description }}
+                    </p>
+                    <p class="h6 text-gray mb-5 font-italic">
+                        Tech: {{ current.technology }}
+                    </p>
+                    <div class="btn-visit">
+                        <a class="btn" href="{{ current.link }}" target="_blank">visit site
+                        <span class='line1'></span>
+                        <span class='line2'></span>
+                        <span class='line3'></span>
+                        <span class='line4'></span>
+                      </a>
+                    </div>
+                    <div class="pg-cont">
+                        <a href="" class=" h6" title="" ng-click="nextPage(next)">next project ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="about-me" ng-controller="AboutCtrl">
+        <div class="container h-100">
+            <img src="images/arrow.svg" class="close-icon" alt="Close Icon" title="back">
+            <div class="row h-100 align-items-center">
+                <div class="col">
+                    <p class="about-text h3"><a href="https://www.linkedin.com/in/valmoratalla/" class="text-white" target="_blank">{{ firstName }}</a> -- that's what they call me - a passionate <a href="https://www.youtube.com/watch?v=Tl0x_zf8I78" class="underlined" target="_blank">{{ position }}</a> who loves coool designs, superb animations, cups of <a href="https://www.pinterest.com/pin/445997169327943744/" class="underline font-italic" target="_blank">coffee</a> and iced tea.</p>
+                    <ul class="social-links">
+                        <li ng-repeat="(key, value) in social"><a class="" href="{{ value.link }}" target="{{ value.target }}">{{ value.name }}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/fontawesome-all.min.js"></script>
+    <script src="js/typed.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

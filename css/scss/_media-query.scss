@@ -1,0 +1,110 @@
+@media (max-width: 1100px) {
+    html,
+    body {
+        font-size: 13px;
+    }
+    .logo-colored {
+        left: 2rem;
+        top: 2rem;
+        width: 50px;
+    }
+    #projects-list {
+        padding-top: 100px;
+        ul {
+            width: 100%;
+            text-align: left;
+            left: 0;
+            position: relative;
+            padding: 3rem;
+            li {
+                a {
+                    color: $lgray;
+                    font-size: 3rem;
+                    margin-right: 0 !important;
+                    padding: 0;
+                    padding-bottom: 2rem;
+                    &:hover {
+                        margin-right: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+    #project-cont {
+        width: 100%;
+        padding: 2rem;
+        -webkit-clip-path: none;
+        clip-path: none;
+        .close-icon {
+            right: 2rem;
+            top: 2rem;
+        }
+        .projects-link {
+            bottom: 2rem;
+            right: 2rem;
+            transform: none;
+            &:after {
+                display: none;
+            }
+        }
+    }
+    #about-me {
+        width: 100%;
+        padding: 2rem;
+        -webkit-clip-path: none;
+        clip-path: none;
+        .close-icon {
+            left: 2rem;
+            top: 2rem;
+        }
+        .about-text {
+            a {
+                color: $white !important;
+            }
+        }
+        .social-links {
+            margin-top: 5rem;
+            text-align: left;
+            li {
+                margin-left: 0;
+                margin-right: 1rem;
+                margin-bottom: 1rem;
+                a {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        .underlined {
+            &:after {
+                display: none;
+            }
+        }
+    }
+    .about-link {
+        bottom: 2rem;
+        left: 2rem;
+        transform: none;
+        &:after {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    html,
+    body {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    html,
+    body {
+        font-size: 10px;
+    }
+    #project-cont {
+        .proj-logo {
+            max-width: 250px;
+        }
+    }
+}
