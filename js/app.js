@@ -40,7 +40,7 @@ app.controller('ProjCtrl', ['$scope',
                 technology: 'html5, css3, jquery, angularjs, laravel, responsiveness, seasonal theme',
                 link: 'http://beepbeep.ph/',
                 delay: '2s',
-                animName: 'fadeInRight'
+                animName: 'fadeInUp'
             },
             {
                 index: 1,
@@ -48,8 +48,8 @@ app.controller('ProjCtrl', ['$scope',
                 description: 'Playboyph is a R18 website that channels a series of blogs, videos, apps, magazines and downloadable copies which are easy-to-understand, user-friendly and download-easy. ',
                 technology: 'html5, css3, jquery, laravel, responsiveness',
                 link: 'http://playboyph.com/',
-                delay: '2.2s',
-                animName: 'fadeInRight'
+                delay: '2.1s',
+                animName: 'fadeInUp'
             },
             {
                 index: 2,
@@ -57,8 +57,8 @@ app.controller('ProjCtrl', ['$scope',
                 description: 'iPlayboyph is a R18 online magazine that provides users with some pornographic contents.',
                 technology: 'html5, css3, jquery, turnjs, laravel, responsiveness',
                 link: 'http://iplayboyph.com/',
-                delay: '2.4s',
-                animName: 'fadeInRight'
+                delay: '2.2s',
+                animName: 'fadeInUp'
             },
             {
                 index: 3,
@@ -66,8 +66,8 @@ app.controller('ProjCtrl', ['$scope',
                 description: 'Cheeseanything is an online application that aims to provide different recipes and stories to their end users. ',
                 technology: 'html5, css3, jquery, laravel, responsiveness',
                 link: 'http://cheeseanything.com/',
-                delay: '2.6s',
-                animName: 'fadeInRight'
+                delay: '2.3s',
+                animName: 'fadeInUp'
             },
             {
                 index: 4,
@@ -75,8 +75,8 @@ app.controller('ProjCtrl', ['$scope',
                 description: 'The Bourke is a reservation website that lets users easily look for accomodation. The website also shows the facilities and foods they offer.',
                 technology: 'html5, css3, jquery, laravel, responsiveness',
                 link: 'http://thebourke.com/',
-                delay: '2.5s',
-                animName: 'fadeInLeft'
+                delay: '2.4s',
+                animName: 'fadeInUp'
             },
             {
                 index: 5,
@@ -84,8 +84,8 @@ app.controller('ProjCtrl', ['$scope',
                 description: 'Snickers Dont Commute Hungry is an app where users can upload, add stickers and share their photo for fabulous prizes.',
                 technology: 'html5, css3, jquery, laravel, responsiveness',
                 link: 'https://dontcommutehungry.com',
-                delay: '2.3s',
-                animName: 'fadeInLeft'
+                delay: '2.5s',
+                animName: 'fadeInUp'
             },
             {
                 index: 6,
@@ -93,8 +93,8 @@ app.controller('ProjCtrl', ['$scope',
                 description: 'Findwork is a landing page website that shows an easy-to-use job search mobile app that connects companies to job seekers in Southeast Asia.',
                 technology: 'html5, css3, jquery, laravel, responsiveness',
                 link: 'http://findwork.asia/',
-                delay: '2.1s',
-                animName: 'fadeInLeft'
+                delay: '2.6s',
+                animName: 'fadeInUp'
             },
         ];
 
