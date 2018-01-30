@@ -13,6 +13,8 @@
         ul {
             width: 100%;
             text-align: left;
+            top: auto;
+            margin-top: 0;
             left: 0;
             position: relative;
             padding: 3rem;
@@ -25,6 +27,11 @@
                     padding-bottom: 2rem;
                     &:hover {
                         margin-right: 0 !important;
+                    }
+                }
+                &:first-child,&:nth-child(6) {
+                    a {
+                        letter-spacing: 1px;
                     }
                 }
             }
@@ -94,6 +101,9 @@
     html,
     body {
         font-size: 12px;
+    }
+    #projects-list {
+        padding-top: 17%;
     }
 }
 
