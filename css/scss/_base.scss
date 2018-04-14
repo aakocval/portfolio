@@ -156,10 +156,7 @@ a {
         &.thebourke {
             border-bottom: 4px solid #9a1843;
         }
-        &.snickers {
-            border-bottom: 4px solid #8c3a12;
-        }
-        &.findwork {
+        &.cheezwhiz {
             border-bottom: 4px solid #35c3ed;
         }
     }
@@ -425,12 +422,10 @@ a {
         background: #9a1843;
         opacity: 0.3;
     }
-    &.snickers {
-        background: #401b09;
-    }
-    &.findwork {
+    &.cheezwhiz {
         background: #35c3ed;
-    }
+        opacity: 0.3;
+    }   
 }
 
 .wow {
@@ -465,14 +460,11 @@ a {
     &.iplayboyph {
         background-image: url('../images/iplayboyph-bg.png');
     }
-    &.snickers {
-        background-image: url('../images/snickers-bg.png');
-    }
     &.thebourke {
         background-image: url('../images/thebourke-bg.png');
     }
-    &.findwork {
-        background-image: url('../images/findwork-bg.png');
+    &.cheezwhiz {
+        background-image: url('../images/cheezwhiz-bg.png');
     }
 }
 
@@ -581,20 +573,6 @@ a {
                     letter-spacing: 4px;
                     &:hover {
                         margin-right: 3%;
-                        color: rgba(139, 69, 19, .9);
-                    }
-                }
-                &.active {
-                    a {
-                        color: rgba(139, 69, 19, .9);
-                    }
-                }
-            }
-            &:nth-child(7) {
-                a {
-                    margin-right: 0%;
-                    &:hover {
-                        margin-right: -2%;
                         color: rgba(53, 195, 237, .8);
                     }
                 }

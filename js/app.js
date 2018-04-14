@@ -80,20 +80,11 @@ app.controller('ProjCtrl', ['$scope',
             },
             {
                 index: 5,
-                name: 'snickers',
-                description: 'Snickers Dont Commute Hungry is an app where users can upload, add stickers and share their photo for fabulous prizes.',
+                name: 'cheezwhiz',
+                description: 'A social platform where kids can submit their own recipe made with cheesewhiz',
                 technology: 'html5, css3, jquery, laravel, responsiveness',
-                link: 'https://dontcommutehungry.com',
+                link: 'http://cheeseventions.com',
                 delay: '2.5s',
-                animName: 'fadeInUp'
-            },
-            {
-                index: 6,
-                name: 'findwork',
-                description: 'Findwork is a landing page website that shows an easy-to-use job search mobile app that connects companies to job seekers in Southeast Asia.',
-                technology: 'html5, css3, jquery, laravel, responsiveness',
-                link: 'http://findwork.asia/',
-                delay: '2.6s',
                 animName: 'fadeInUp'
             },
         ];
