@@ -3,18 +3,18 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Val Moratalla - Front-end Developer</title>
-    <meta property="og:url" content="http://www.aakocval.com">
+    <title>Val Moratalla - iOS Developer</title>
+    <meta property="og:url" content="https://aakocval.github.io/portfolio/">
      <!-- Facebook -->
     <meta property="og:title" content="Val Moratalla - Front-end Developer" />
     <meta property="og:description" content="Portfolio of front-end developer Val Moratalla based in Manila — available for opportunities. Loves cool design and animations." />
-    <meta property="og:image" content="http://www.aakocval.com/images/meta.jpg" />
-    
+    <meta property="og:image" content="https://aakocval.github.io/portfolio/images/meta.jpg" />
+
     <meta name="description" content="Portfolio of front-end developer Val Moratalla based in Manila — available for opportunities. Loves cool design and animations.">
-    
+
     <meta name="author" content="Val Moratalla">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">   
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="css/animate.min.css" rel="stylesheet">
@@ -36,7 +36,7 @@
     <div id="main-wrapper">
         <div id="projects-list">
             <ul>
-                <li ng-repeat="(key, value) in projects" class="wow {{ value.animName }}" data-wow-delay="{{ value.delay }}" ng-class="{active : activeMenu === value}"><a ng-mouseover="hoverIn(value.name); setActive(value)" ng-click="selected = value; setActive(value,key)"> {{ value.name }}</a>
+                <li ng-repeat="(key, value) in projects" class="wow {{ value.animName }}" data-wow-delay="{{ value.delay }}" ng-class="{active : activeMenu === value}"><a ng-mouseover="hoverIn(value.misc); setActive(value)" ng-click="selected = value; setActive(value,key)"> {{ value.name }}</a>
                 </li>
             </ul>
         </div>
@@ -56,7 +56,7 @@
             <img src="images/arrow.svg" class="close-icon" alt="Close Icon" title="back">
             <div class="row h-100 align-items-center">
                 <div class="col text-white">
-                    <img src="images/logos/{{ current.name }}.png" class="mb-3 mt-md-5 proj-logo" alt="{{ current.name }} Logo">
+                    <img src="images/logos/{{ current.name }}.png" class="mb-1 mt-md-5 proj-logo " alt="{{ current.name }} Logo">
                     <hr ng-class="projName">
                     <p class="h5 mb-4">
                         {{ current.description }}
@@ -65,7 +65,7 @@
                         Tech: {{ current.technology }}
                     </p>
                     <div class="btn-visit">
-                        <a class="btn" href="{{ current.link }}" target="_blank">visit site
+                        <a class="btn" href="{{ current.link }}" target="_blank">visit website / AppStore
                         <span class='line1'></span>
                         <span class='line2'></span>
                         <span class='line3'></span>
@@ -84,7 +84,7 @@
             <img src="images/arrow.svg" class="close-icon" alt="Close Icon" title="back">
             <div class="row h-100 align-items-center">
                 <div class="col">
-                    <p class="about-text h3"><a href="https://www.linkedin.com/in/valmoratalla/" class="text-white font-weight-bold" target="_blank">{{ firstName }}</a> -- that's what they call me - a passionate {{ position }} who loves coool designs, superb animations, cups of <a href="https://www.pinterest.com/pin/445997169327943744/" class="underline font-italic" target="_blank">coffee</a> and iced tea.</p>
+                    <p class="about-text h3"><a href="https://www.linkedin.com/in/valmoratalla/" class="text-white font-weight-bold" target="_blank">{{ firstName }}</a> -- that's what they call me - a passionate {{ position }} who loves Apple, superb designs & animations, cups of <a href="https://www.pinterest.com/pin/445997169327943744/" class="underline font-italic" target="_blank">coffee</a> and iced tea.</p>
                     <ul class="social-links">
                         <li ng-repeat="(key, value) in social"><a class="" href="{{ value.link }}" target="{{ value.target }}">{{ value.name }}</a></li>
                     </ul>

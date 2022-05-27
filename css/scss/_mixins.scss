@@ -10,7 +10,7 @@
      -moz-box-shadow: $shadow;
       -ms-box-shadow: $shadow;
           box-shadow: $shadow;
-}
+} 
 
 @mixin transition($transition){
   -webkit-transition: $transition;
