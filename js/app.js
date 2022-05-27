@@ -4,7 +4,7 @@ app.controller('AboutCtrl', ['$scope',
     function ($scope) {
         $scope.firstName = "val";
         $scope.lastName = "Moratalla";
-        $scope.position = "iOS Developer";
+        $scope.position = "front-end Developer";
         $scope.social = [
             {
                 name: 'email',
@@ -20,7 +20,12 @@ app.controller('AboutCtrl', ['$scope',
                 name: 'facebook',
                 link: 'https://www.facebook.com/val.moratalla',
                 target: '_blank'
-            }
+            },
+            {
+                name: 'instagram',
+                link: 'https://www.instagram.com/aakocval/',
+                target: '_blank'
+            },
         ]
     }
 ]);
@@ -30,54 +35,58 @@ app.controller('ProjCtrl', ['$scope',
         $scope.projects = [
             {
                 index: 0,
-                name: 'Phoenix Live',
-                description: 'Phoenix is unrivalled in the ag software industry in terms of its ability to cover an entire rural production system. While other programs have come and gone, Phoenix remains the premier farm management software solution - designed specifically for Aussie producers.',
-                technology: 'MVVM, RXSwift, Alamofire, Realm, Fastlane, Mapbox, Unit Testing',
-                link: 'https://apps.apple.com/au/app/phoenix-live/id1503981683',
+                name: 'beepbeep',
+                description: 'Beep Beep is an online platform that aims to link automobile owners with car establishments around Metro Manila.',
+                technology: 'html5, css3, jquery, angularjs, laravel, responsiveness, seasonal theme',
+                link: 'http://beepbeep.ph/',
                 delay: '2s',
-                animName: 'fadeInUp',
-                misc: 'one'
+                animName: 'fadeInUp'
             },
             {
                 index: 1,
-                name: 'Quest Rewards',
-                description: 'An enterprise gamification software with employee motivation at its core.',
-                technology: 'MVVM, RxSwift, Moya, Realm, RxDataSources, ObjectMapper, SnapKit, Unit Testing',
-                link: 'https://apps.apple.com/la/app/quest-rewards/id1501470735',
+                name: 'playboyph',
+                description: 'Playboyph is a R18 website that channels a series of blogs, videos, apps, magazines and downloadable copies which are easy-to-understand, user-friendly and download-easy. ',
+                technology: 'html5, css3, jquery, laravel, responsiveness',
+                link: 'http://playboyph.com/',
                 delay: '2.1s',
-                animName: 'fadeInUp',
-                misc: 'two'
+                animName: 'fadeInUp'
             },
             {
                 index: 2,
-                name: 'Carry Ph',
-                description: 'Imagine having the things you need and want delivered right to your doorsteps, fast, affordable and reliable, nothing comes close to CARRY, crafted to be the BETTER normal during these trying times.',
-                technology: 'MVP, Moya, Storyboard/Xib, Fastlane, Google Maps and Places, Firebase, APNs',
-                link: 'https://apps.apple.com/ph/app/carry-ph/id1531075542',
+                name: 'iplayboyph',
+                description: 'iPlayboyph is a R18 online magazine that provides users with some pornographic contents.',
+                technology: 'html5, css3, jquery, turnjs, laravel, responsiveness',
+                link: 'http://iplayboyph.com/',
                 delay: '2.2s',
-                animName: 'fadeInUp',
-                misc: 'three'
+                animName: 'fadeInUp'
             },
             {
                 index: 3,
-                name: 'Kitika',
-                description: 'Get the right care,right at home! No need to brave metro’s traffic. Skip the long lines and wait time. Plus, reduce your risk of exposure to COVID-19. ',
-                technology: 'MVP, Moya, SwiftLint, ObjectMapper, Firebase, SnapKit, MessageKit, FB Login',
-                link: 'https://kitika.com',
+                name: 'cheeseanything',
+                description: 'Cheeseanything is an online application that aims to provide different recipes and stories to their end users. ',
+                technology: 'html5, css3, jquery, laravel, responsiveness',
+                link: 'http://cheeseanything.com/',
                 delay: '2.3s',
-                animName: 'fadeInUp',
-                misc: 'four'
+                animName: 'fadeInUp'
             },
             {
                 index: 4,
-                name: 'beepbeep',
-                description: 'Beep Beep is an online platform that aims to link automobile owners with car establishments around Metro Manila.',
-                technology: 'MVC, SwiftyJson, Moya, Google Maps, APNs',
-                link: 'https://beepbeep.ph',
+                name: 'thebourke',
+                description: 'The Bourke is a reservation website that lets users easily look for accomodation. The website also shows the facilities and foods they offer.',
+                technology: 'html5, css3, jquery, laravel, responsiveness',
+                link: 'http://thebourke.com/',
                 delay: '2.4s',
-                animName: 'fadeInUp',
-                misc: 'five'
-            }
+                animName: 'fadeInUp'
+            },
+            {
+                index: 5,
+                name: 'cheezwhiz',
+                description: 'A social platform where kids can submit their own recipe made with cheesewhiz',
+                technology: 'html5, css3, jquery, laravel, responsiveness',
+                link: 'http://cheeseventions.com',
+                delay: '2.5s',
+                animName: 'fadeInUp'
+            },
         ];
 
         $scope.hoverIn = function (val) {
@@ -90,7 +99,7 @@ app.controller('ProjCtrl', ['$scope',
         }
 
         $scope.current = $scope.projects[0];
-
+        
         $scope.setActive = function (val, key) {
             $scope.activeMenu = val;
             $scope.current = $scope.projects[key];
@@ -101,12 +110,13 @@ app.controller('ProjCtrl', ['$scope',
         }
 
         $scope.nextPage = function (key) {
+
             $scope.current = $scope.projects[key];
             $scope.next = $scope.next + 1;
             if ($scope.next === $scope.projects.length) {
                 $scope.next = 0;
             }
-            $scope.projName = $scope.projects[key].misc;
+            $scope.projName = $scope.projects[key].name;
             $scope.activeMenu = $scope.projects[key];
         }
 
@@ -122,11 +132,14 @@ app.controller('ProjCtrl', ['$scope',
 
 
 $(document).ready(function () {
-    $('#preloader').addClass('animated bounceOut out', function () {
-        $(this).remove();
+    
+    $(window).on("load", function (e) {
+        $('#preloader').addClass('animated bounceOut out', function () {
+            $(this).remove();
+        });
+        $('.v').addClass('active');
+        new WOW().init();
     });
-    $('.v').addClass('active');
-    new WOW().init();
 
     $('.about-link, #about-me .close-icon').on('click', function () {
         $('#main-wrapper').toggleClass('about');
@@ -139,4 +152,6 @@ $(document).ready(function () {
         $('#project-cont').toggleClass('active');
         $('#projects-list ul, .logo-colored, .about-link').toggleClass('hide');
     });
+
+
 });

@@ -138,28 +138,26 @@ a {
     &.active {
         right: 0;
     }
-    .proj-logo {
-      max-height: 75px;
-      max-width: 250px;
-      filter: brightness(0) invert(1);
-    }
     hr {
         max-width: 60px;
         margin: 2rem 0;
-        &.one {
-            border-bottom: 4px solid $colorOne;
+        &.beepbeep {
+            border-bottom: 4px solid #fd8204;
         }
-        &.two {
-            border-bottom: 4px solid $colorTwo;
+        &.playboyph {
+            border-bottom: 4px solid #981521;
         }
-        &.three {
-            border-bottom: 4px solid $colorThree;
+        &.iplayboyph {
+            border-bottom: 4px solid #fcdea5;
         }
-        &.four {
-            border-bottom: 4px solid $colorFour;
+        &.cheeseanything {
+            border-bottom: 4px solid #ffd120;
         }
-        &.five {
-            border-bottom: 4px solid $colorFive;
+        &.thebourke {
+            border-bottom: 4px solid #9a1843;
+        }
+        &.cheezwhiz {
+            border-bottom: 4px solid #35c3ed;
         }
     }
     .pg-cont {
@@ -407,23 +405,27 @@ a {
     background: $red;
     opacity: 0.5;
     transition: all 0.2s ease-in-out;
-    &.one {
+    &.beepbeep {
         background: #fd8204;
     }
-    &.two {
+    &.playboyph {
         background: #981521;
     }
-    &.three {
+    &.iplayboyph {
         background: #fcdea5;
     }
-    &.four {
+    &.cheeseanything {
         background: #ffd120;
         opacity: 0.3;
     }
-    &.five {
+    &.thebourke {
         background: #9a1843;
         opacity: 0.3;
     }
+    &.cheezwhiz {
+        background: #35c3ed;
+        opacity: 0.3;
+    }   
 }
 
 .wow {
@@ -446,20 +448,23 @@ a {
     -moz-background-size: cover;
     -webkit-background-size: cover;
     background-size: cover;
-    &.one {
+    &.beepbeep {
         background-image: url('../images/beepbeep-bg.png');
     }
-    &.two {
+    &.cheeseanything {
         background-image: url('../images/cheeseanything-bg.png');
     }
-    &.three {
+    &.playboyph {
         background-image: url('../images/playboyph-bg.png');
     }
-    &.four {
+    &.iplayboyph {
         background-image: url('../images/iplayboyph-bg.png');
     }
-    &.five {
+    &.thebourke {
         background-image: url('../images/thebourke-bg.png');
+    }
+    &.cheezwhiz {
+        background-image: url('../images/cheezwhiz-bg.png');
     }
 }
 
@@ -471,7 +476,7 @@ a {
         text-transform: uppercase;
         top: 50%;
         right: 38%;
-        margin-top: -180px;
+        margin-top: -250px;
         width: 50%;
         transition: all 0.5s ease-in-out;
         &.hide {
@@ -503,7 +508,7 @@ a {
                 }
                 &.active {
                     a {
-                        color: $colorOne;
+                        color: rgba(253, 130, 4, 0.5);
                     }
                 }
             }
@@ -516,7 +521,7 @@ a {
                 }
                 &.active {
                     a {
-                        color: $colorTwo;
+                        color: #981521;
                     }
                 }
             }
@@ -525,12 +530,12 @@ a {
                     margin-right: 16%;
                     &:hover {
                         margin-right: 14%;
-                        color: $colorThree;
+                        color: rgba(252, 222, 165, .7);
                     }
                 }
                 &.active {
                     a {
-                        color: $colorThree;
+                        color: rgba(252, 222, 165, .7);
                     }
                 }
             }
@@ -539,12 +544,12 @@ a {
                     margin-right: 12%;
                     &:hover {
                         margin-right: 10%;
-                        color: $colorFour;
+                        color: rgba(255, 209, 32, .6);
                     }
                 }
                 &.active {
                     a {
-                        color: $colorFour;
+                        color: rgba(255, 209, 32, .6);
                     }
                 }
             }
@@ -553,12 +558,12 @@ a {
                     margin-right: 8%;
                     &:hover {
                         margin-right: 6%;
-                        color: $colorFive;
+                        color: #9a1843;
                     }
                 }
                 &.active {
                     a {
-                        color: $colorFive;
+                        color: #9a1843;
                     }
                 }
             }
