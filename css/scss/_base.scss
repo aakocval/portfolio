@@ -408,20 +408,23 @@ a {
     opacity: 0.5;
     transition: all 0.2s ease-in-out;
     &.one {
-        background: #fd8204;
+        background: $colorOne;
+        opacity: 0.3;
     }
     &.two {
-        background: #981521;
+        background: $colorTwo;
+        opacity: 0.3;
     }
     &.three {
-        background: #fcdea5;
+        background: $colorThree;
+        opacity: 0.3;
     }
     &.four {
-        background: #ffd120;
+        background: $colorFour;
         opacity: 0.3;
     }
     &.five {
-        background: #9a1843;
+        background: $colorFive;
         opacity: 0.3;
     }
 }
@@ -447,19 +450,19 @@ a {
     -webkit-background-size: cover;
     background-size: cover;
     &.one {
-        background-image: url('../images/beepbeep-bg.png');
+        background-image: url('../images/one.png');
     }
     &.two {
-        background-image: url('../images/cheeseanything-bg.png');
+        background-image: url('../images/two.png');
     }
     &.three {
-        background-image: url('../images/playboyph-bg.png');
+        background-image: url('../images/three.png');
     }
     &.four {
-        background-image: url('../images/iplayboyph-bg.png');
+        background-image: url('../images/four.png');
     }
     &.five {
-        background-image: url('../images/thebourke-bg.png');
+        background-image: url('../images/five.png');
     }
 }
 
