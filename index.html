@@ -61,11 +61,17 @@
                     <p class="h5 mb-4">
                         {{ current.description }}
                     </p>
-                    <p class="h6 text-gray mb-5 font-italic">
-                        Tech: {{ current.technology }}
+                    <p class="h6 text-gray mb-2">
+                        Position: {{ current.position }}
                     </p>
-                    <div class="btn-visit">
-                        <a class="btn" href="{{ current.link }}" target="_blank">Website / AppStore
+                    <p class="h6 text-gray mb-2">
+                        Responsibilities: {{ current.responsibilities }}
+                    </p>
+                    <p class="h6 text-gray mb-2">
+                        Tech Stack: {{ current.technology }}
+                    </p>
+                    <div ng-if="current.name != 'Quest Rewards'" class="btn-visit mt-4">
+                        <a class="btn" href="{{ current.link }}" target="_blank">View {{ current.name }} app
                         <span class='line1'></span>
                         <span class='line2'></span>
                         <span class='line3'></span>
@@ -73,7 +79,7 @@
                       </a>
                     </div>
                     <div class="pg-cont">
-                        <a href="" class=" h6" title="" ng-click="nextPage(next)">next project ></a>
+                        <a href="" class="h6" title="" ng-click="nextPage(next)">next project ></a>
                     </div>
                 </div>
             </div>
