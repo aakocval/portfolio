@@ -162,6 +162,13 @@ a {
             border-bottom: 4px solid $colorFive;
         }
     }
+    .col {
+        transition: opacity 0.25s ease, transform 0.25s ease;
+        &.proj-transitioning {
+            opacity: 0;
+            transform: translateY(12px);
+        }
+    }
     .pg-cont {
         margin-top: 5rem;
         a {
