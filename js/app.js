@@ -25,8 +25,8 @@ app.controller('AboutCtrl', ['$scope',
     }
 ]);
 
-app.controller('ProjCtrl', ['$scope',
-    function ($scope) {
+app.controller('ProjCtrl', ['$scope', '$timeout',
+    function ($scope, $timeout) {
         $scope.projects = [
             {
                 index: 0,
@@ -42,12 +42,12 @@ app.controller('ProjCtrl', ['$scope',
             },
             {
                 index: 1,
-                name: 'Carry Ph',
-                description: 'Imagine having the things you need and want delivered right to your doorsteps, fast, affordable and reliable',
+                name: 'Pinch',
+                description: 'Video Collaboration App',
                 position: 'iOS Developer',
-                responsibilities: 'Develop product features. Collaborate with different teams.',
-                technology: 'Swift, MVP, Moya, Storyboard/Xib, Fastlane, Google Maps and Places, Firebase, APNs',
-                link: 'https://apps.apple.com/ph/app/carry-ph/id1531075542',
+                responsibilities: 'Started the app from scratch, maintained and added new features.',
+                technology: 'SwiftUI, MVVM-C, Codable, Storyboard, Alamofire, In-app Purchase',
+                link: 'https://apps.apple.com/au/app/pinch-share-edit/id6475806094',
                 delay: '2.1s',
                 animName: 'fadeInUp',
                 misc: 'two'
@@ -78,12 +78,13 @@ app.controller('ProjCtrl', ['$scope',
             },
             {
                 index: 4,
-                name: 'Quest Rewards',
-                description: 'An enterprise gamification software with employee motivation at its core.',
-                technology: 'Swift, MVVM, RxSwift, Moya, Realm, RxDataSources, ObjectMapper, SnapKit, Unit Testing',
+                name: 'CabinKeep',
+                description: 'Your all-in-one home management app',
+                technology: 'SwiftUI, MVVM-C, InApp Purchase, Unit Testing',
                 position: 'iOS Developer',
-                responsibilities: 'Develop and maintain product features. Assisted in refactoring the codebase',
-                link: '',
+                responsibilities: 'Started the app from scratch and added new features.',
+                link: 'https://apps.apple.com/au/app/cabinkeep-house-management/id6755082635',
+                noInvert: true,
                 delay: '2.4s',
                 animName: 'fadeInUp',
                 misc: 'five'
@@ -112,13 +113,17 @@ app.controller('ProjCtrl', ['$scope',
         }
 
         $scope.nextPage = function (key) {
-            $scope.current = $scope.projects[key];
-            $scope.next = $scope.next + 1;
-            if ($scope.next === $scope.projects.length) {
-                $scope.next = 0;
-            }
-            $scope.projName = $scope.projects[key].misc;
-            $scope.activeMenu = $scope.projects[key];
+            $scope.transitioning = true;
+            $timeout(function () {
+                $scope.current = $scope.projects[key];
+                $scope.next = $scope.next + 1;
+                if ($scope.next === $scope.projects.length) {
+                    $scope.next = 0;
+                }
+                $scope.projName = $scope.projects[key].misc;
+                $scope.activeMenu = $scope.projects[key];
+                $scope.transitioning = false;
+            }, 250);
         }
 
         $scope.getIndex = function (currentIndex, shift) {
