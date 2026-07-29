@@ -1,5 +1,21 @@
 var projects = [
     {
+        name: 'mWell',
+        description: 'Telemedicine App.',
+        responsibilities: 'Maintained and added new features.',
+        technology: 'Swift, SwiftUI, MVVM, Codable, Storyboard, Alamofire',
+        link: 'https://apps.apple.com/ph/app/mwell-ph-24-7-doctor-consult/id1540729485',
+        misc: 'five'
+    },
+    {
+        name: 'Phoenix Live',
+        description: 'Farm management app for agriculture.',
+        responsibilities: 'Maintain and add new features.',
+        technology: 'Swift, MVVM, Alamofire, Realm, Fastlane, Mapbox, Localization, Unit Testing',
+        link: 'https://apps.apple.com/au/app/phoenix-live/id1503981683',
+        misc: 'four'
+    },
+    {
         name: 'Intro.u',
         description: 'Match and meet with people around you according to your preferences.',
         responsibilities: 'Started the app from scratch and added new features.',
@@ -54,22 +70,6 @@ var projects = [
         technology: 'SwiftUI, MVVM-C, Codable, Storyboard, Alamofire, In-app Purchase',
         link: 'https://apps.apple.com/au/app/pinch-share-edit/id6475806094',
         misc: 'three'
-    },
-    {
-        name: 'Phoenix Live',
-        description: 'Farm management app for agriculture.',
-        responsibilities: 'Maintain and add new features.',
-        technology: 'Swift, MVVM, Alamofire, Realm, Fastlane, Mapbox, Localization, Unit Testing',
-        link: 'https://apps.apple.com/au/app/phoenix-live/id1503981683',
-        misc: 'four'
-    },
-    {
-        name: 'mWell',
-        description: 'Telemedicine App.',
-        responsibilities: 'Maintained and added new features.',
-        technology: 'Swift, SwiftUI, MVVM, Codable, Storyboard, Alamofire',
-        link: 'https://apps.apple.com/ph/app/mwell-ph-24-7-doctor-consult/id1540729485',
-        misc: 'five'
     },
     {
         name: 'Dermobella Skin & DermobellaHair',

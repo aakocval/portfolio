@@ -1,3 +1,30 @@
+@media (max-width: 900px) {
+    .hero {
+        padding: 2rem;
+    }
+
+    .hero-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-devices {
+        width: 80%;
+        max-width: 320px;
+        order: -1;
+        transform: rotate(-4deg);
+    }
+
+    .hero-links {
+        justify-content: center;
+    }
+}
+
 @media (max-width: 600px) {
     .hero-name {
         font-size: 2.4rem;
@@ -22,39 +49,15 @@
         }
     }
 
+    .hero-devices {
+        width: 70%;
+    }
+
     .section {
         padding: 4rem 0;
     }
 
     main {
         padding: 0 1.5rem;
-    }
-
-    .device-phone {
-        width: 105px;
-        height: 210px;
-        top: 8%;
-        left: -8%;
-    }
-
-    .device-tablet {
-        width: 182px;
-        height: 238px;
-        bottom: 6%;
-        right: -10%;
-    }
-
-    .device-android {
-        width: 98px;
-        height: 203px;
-        bottom: 8%;
-        left: -10%;
-    }
-
-    .device-watch {
-        width: 77px;
-        height: 91px;
-        top: 14%;
-        right: -6%;
     }
 }
