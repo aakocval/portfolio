@@ -79,6 +79,13 @@ var projects = [
         link: 'https://apps.apple.com/us/app/dermobella-skin-2-evo/id1529570669',
         misc: 'one'
     },
+    {
+        name: 'Senior Citizen Partylist App (Beta)',
+        description: 'Connects senior citizen constituents with party programs, legislative updates, and direct support channels across the Philippines.',
+        responsibilities: 'Maintained and added new features.',
+        technology: 'Flutter, Dart',
+        misc: 'two'
+    },
 ];
 
 function renderProjects() {
