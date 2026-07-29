@@ -3,109 +3,180 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Val Moratalla - iOS Developer</title>
+    <title>Michael Val Moratalla - Mobile App Developer</title>
     <meta property="og:url" content="https://aakocval.github.io/portfolio/">
-     <!-- Facebook -->
-    <meta property="og:title" content="Val Moratalla - iOS Developer" />
-    <meta property="og:description" content="Portfolio of iOS developer Val Moratalla based in Manila — available for opportunities. Loves cool design and animations." />
+    <!-- Facebook -->
+    <meta property="og:title" content="Michael Val Moratalla - Mobile App Developer" />
+    <meta property="og:description" content="Portfolio of Michael Val Moratalla, Mobile App Developer based in Quezon City, PH — available for opportunities." />
     <meta property="og:image" content="https://aakocval.github.io/portfolio/images/meta.jpg" />
 
-    <meta name="description" content="Portfolio of iOS developer Val Moratalla based in Manila — available for opportunities. Loves cool design and animations.">
+    <meta name="description" content="Portfolio of Michael Val Moratalla, Mobile App Developer based in Quezon City, PH — available for opportunities.">
 
-    <meta name="author" content="Val Moratalla">
+    <meta name="author" content="Michael Val Moratalla">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/fa-svg-with-js.css">
-    <link href="css/style.min.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="shortcut icon" href="favicon.ico?v=2" type="image/x-icon">
-
 </head>
 
-<body ng-app="app" ng-controller="ProjCtrl">
-    <div id="preloader"></div>
-    <div id="main-wrapper">
-        <div id="projects-list">
-            <ul>
-                <li ng-repeat="(key, value) in projects" class="wow {{ value.animName }}" data-wow-delay="{{ value.delay }}" ng-class="{active : activeMenu === value}"><a ng-mouseover="hoverIn(value.misc); setActive(value)" ng-click="selected = value; setActive(value,key)"> {{ value.name }}</a>
+<body>
+    <div class="scroll-progress" id="scroll-progress"></div>
+    <header class="hero">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <img src="images/logo.png" class="hero-logo" alt="Michael Val Moratalla logo">
+                <h1 class="hero-name">Michael Val Moratalla</h1>
+                <p class="hero-title">Mobile App Developer based in Quezon City, PH</p>
+                <nav class="hero-links" id="hero-nav">
+                    <a href="#about" data-nav="about">About</a>
+                    <a href="#experience" data-nav="experience">Experience</a>
+                    <a href="#skills" data-nav="skills">Skills</a>
+                    <a href="#projects" data-nav="projects">Projects</a>
+                    <a href="mailto:aakocval@gmail.com">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section reveal">
+            <h2>About</h2>
+            <p class="about-text">
+                I'm Val — a Mobile App Developer who loves clean design and shipping products
+                people actually use. Over the past decade I've built and led mobile apps from scratch to
+                production across iOS and cross-platform with Flutter and React Native. Got an app idea in mind?
+                Let's grab a coffee and talk it through.
+            </p>
+            <ul class="social-links">
+                <li class="stagger-item"><a href="mailto:aakocval@gmail.com">Email</a></li>
+                <li class="stagger-item"><a href="https://www.linkedin.com/in/valmoratalla/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li class="stagger-item"><a href="https://www.facebook.com/val.moratalla" target="_blank" rel="noopener">Facebook</a></li>
+            </ul>
+        </section>
+
+        <section id="experience" class="section reveal">
+            <h2>Experience</h2>
+            <ul class="experience-list">
+                <li class="stagger-item">
+                    <div class="experience-head">
+                        <span class="experience-role">Mobile App Developer</span>
+                        <span class="experience-period">Nov 2020 — Present</span>
+                    </div>
+                    <span class="experience-company">Yoonet Pty Ltd. Inc.</span>
+                    <p>Developed scalable mobile applications. Reviewed client requirements, mockups, and designs to ensure technical feasibility and alignment with project goals. Documented software requirements and maintained clear technical documentation for new and existing features.</p>
+                </li>
+                <li class="stagger-item">
+                    <div class="experience-head">
+                        <span class="experience-role">iOS Developer</span>
+                        <span class="experience-period">May 2019 — Jul 2020</span>
+                    </div>
+                    <span class="experience-company">Thirty One Digital</span>
+                    <p>Developed and maintained various iOS apps. Assisted in implementing code standards for a more readable codebase. Documented software requirements for new and existing features.</p>
+                </li>
+                <li class="stagger-item">
+                    <div class="experience-head">
+                        <span class="experience-role">Frontend Developer</span>
+                        <span class="experience-period">Jul 2016 — Apr 2019</span>
+                    </div>
+                    <span class="experience-company">Thirty One Digital</span>
+                    <p>Developed multiple websites and rich media banners using the latest web technologies.</p>
+                </li>
+                <li class="stagger-item">
+                    <div class="experience-head">
+                        <span class="experience-role">Programmer</span>
+                        <span class="experience-period">May 2015 — May 2016</span>
+                    </div>
+                    <span class="experience-company">Alfafusion</span>
+                    <p>Developed and maintained several websites and systems.</p>
                 </li>
             </ul>
-        </div>
-        <div class="cover" ng-class="projName"></div>
-        <div class="shade" ng-class="projName"></div>
-        <div class="v"></div>
-        <a href="index.html" ng-mouseover="hoverOut(); setActive(value)">
-            <img src="images/logo.png" class="logo-colored active wow fadeIn" data-wow-delay="3s">
-        </a>
-        <a class="wow fadeIn about-link" data-wow-delay="3.5s">about</a>
-        <h1 class="sr-only">Val Moratalla</h1>
-    </div>
+        </section>
 
-    <div id="project-cont">
-        <a class="projects-link">projects</a>
-        <div class="container h-100">
-            <img src="images/arrow.svg" class="close-icon" alt="Close Icon" title="back">
-            <div class="row h-100 align-items-center">
-                <div class="col text-white" ng-class="{'proj-transitioning': transitioning}">
-                    <img src="images/logos/{{ current.name }}.png" class="mb-1 mt-md-5 proj-logo" ng-style="current.noInvert && {'filter': 'none'}" alt="{{ current.name }} Logo">
-                    <hr ng-class="projName">
-                    <p class="h5 mb-4">
-                        {{ current.description }}
-                    </p>
-                    <p class="h6 text-gray mb-2">
-                        Position: {{ current.position }}
-                    </p>
-                    <p class="h6 text-gray mb-2">
-                        Responsibilities: {{ current.responsibilities }}
-                    </p>
-                    <p class="h6 text-gray mb-2">
-                        Tech Stack: {{ current.technology }}
-                    </p>
-                    <div class="btn-visit mt-4">
-                        <a class="btn" href="{{ current.link }}" target="_blank">View {{ current.name }} app
-                        <span class='line1'></span>
-                        <span class='line2'></span>
-                        <span class='line3'></span>
-                        <span class='line4'></span>
-                      </a>
-                    </div>
-                    <div class="pg-cont">
-                        <a href="" class="h6" title="" ng-click="nextPage(next)">next project ></a>
-                    </div>
-                </div>
+        <section id="skills" class="section reveal">
+            <h2>Skills</h2>
+            <div class="skill-group stagger-item">
+                <h3>Mobile Development</h3>
+                <ul class="skills-list">
+                    <li>Swift</li>
+                    <li>Flutter</li>
+                    <li>Dart</li>
+                    <li>React Native</li>
+                    <li>Expo</li>
+                    <li>TypeScript</li>
+                    <li>watchOS</li>
+                </ul>
             </div>
-        </div>
-    </div>
-    <div id="about-me" ng-controller="AboutCtrl">
-        <div class="container h-100">
-            <img src="images/arrow.svg" class="close-icon" alt="Close Icon" title="back">
-            <div class="row h-100 align-items-center">
-                <div class="col">
-                    <p class="about-text h3"><a href="https://www.linkedin.com/in/valmoratalla/" class="text-white font-weight-bold" target="_blank">{{ firstName }}</a> -- that's what they call me - a passionate {{ position }} who loves Apple, superb designs, cool animations, cups of <a href="https://www.pinterest.com/pin/445997169327943744/" class="underline font-italic" target="_blank">coffee</a> and iced tea.</p>
-                    <ul class="social-links">
-                        <li ng-repeat="(key, value) in social"><a class="" href="{{ value.link }}" target="{{ value.target }}">{{ value.name }}</a></li>
-                    </ul>
-                </div>
+            <div class="skill-group stagger-item">
+                <h3>Frameworks &amp; Libraries</h3>
+                <ul class="skills-list">
+                    <li>Firebase</li>
+                    <li>Realm</li>
+                    <li>Google Maps</li>
+                    <li>Mapbox</li>
+                </ul>
             </div>
-        </div>
-    </div>
+            <div class="skill-group stagger-item">
+                <h3>Mobile Features</h3>
+                <ul class="skills-list">
+                    <li>In-App Purchases</li>
+                    <li>Push Notifications</li>
+                    <li>Face ID / Touch ID</li>
+                    <li>Background Refresh</li>
+                    <li>Localization</li>
+                    <li>Unit Testing</li>
+                    <li>Analytics</li>
+                    <li>Crash Reporting</li>
+                    <li>Deep Linking</li>
+                    <li>State Management</li>
+                    <li>Offline Storage / Caching</li>
+                </ul>
+            </div>
+            <div class="skill-group stagger-item">
+                <h3>CI/CD &amp; DevOps</h3>
+                <ul class="skills-list">
+                    <li>Fastlane</li>
+                    <li>Bitrise</li>
+                    <li>Xcode Cloud</li>
+                    <li>GitHub</li>
+                    <li>Bitbucket</li>
+                    <li>SourceTree</li>
+                    <li>GitHub Actions</li>
+                    <li>Codemagic</li>
+                    <li>App Center</li>
+                    <li>Google Play Console</li>
+                    <li>App Store Connect</li>
+                </ul>
+            </div>
+            <div class="skill-group stagger-item">
+                <h3>Tools</h3>
+                <ul class="skills-list">
+                    <li>Jira</li>
+                    <li>Confluence</li>
+                    <li>Figma</li>
+                    <li>Claude AI</li>
+                    <li>ChatGPT</li>
+                    <li>Cursor AI</li>
+                    <li>Xcode</li>
+                    <li>Android Studio</li>
+                    <li>VS Code</li>
+                    <li>Postman</li>
+                    <li>TestFlight</li>
+                    <li>Slack</li>
+                </ul>
+            </div>
+        </section>
 
-    <script src="js/angular.min.js"></script>
-    <script src="js/jquery-3.2.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/fontawesome-all.min.js"></script>
-    <script src="js/typed.js"></script>
-    <script src="js/wow.min.js"></script>
+        <section id="projects" class="section reveal">
+            <h2>Projects</h2>
+            <ul class="projects-list" id="projects-list"></ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; <span id="year"></span> Michael Val Moratalla</p>
+    </footer>
+
     <script src="js/app.js"></script>
 </body>
 
