@@ -3,102 +3,85 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Michael Val Moratalla - Mobile App Developer</title>
+    <title>Michael Val Moratalla - Software Engineer</title>
     <meta property="og:url" content="https://aakocval.github.io/portfolio/">
     <!-- Facebook -->
-    <meta property="og:title" content="Michael Val Moratalla - Mobile App Developer" />
-    <meta property="og:description" content="Portfolio of Michael Val Moratalla, Mobile App Developer based in Quezon City, PH — available for opportunities." />
+    <meta property="og:title" content="Michael Val Moratalla - Software Engineer" />
+    <meta property="og:description" content="Portfolio of Michael Val Moratalla, Software Engineer based in Quezon City, PH — available for opportunities." />
     <meta property="og:image" content="https://aakocval.github.io/portfolio/images/meta.jpg" />
 
-    <meta name="description" content="Portfolio of Michael Val Moratalla, Mobile App Developer based in Quezon City, PH — available for opportunities.">
+    <meta name="description" content="Portfolio of Michael Val Moratalla, Software Engineer based in Quezon City, PH — available for opportunities.">
 
     <meta name="author" content="Michael Val Moratalla">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="shortcut icon" href="favicon.ico?v=2" type="image/x-icon">
 </head>
 
 <body>
+    <a href="#main" class="skip-link">Skip to content</a>
     <div class="scroll-progress" id="scroll-progress"></div>
-    <header class="hero">
-        <div class="hero-inner">
-            <div class="hero-content">
-                <img src="images/logo.png" class="hero-logo" alt="Michael Val Moratalla logo">
-                <h1 class="hero-name">Michael Val Moratalla</h1>
-                <p class="hero-title">Mobile App Developer based in Quezon City, PH</p>
-                <nav class="hero-links" id="hero-nav">
-                    <a href="#about" data-nav="about">About</a>
-                    <a href="#experience" data-nav="experience">Experience</a>
-                    <a href="#skills" data-nav="skills">Skills</a>
-                    <a href="#projects" data-nav="projects">Projects</a>
-                    <a href="mailto:aakocval@gmail.com">Contact</a>
-                </nav>
-            </div>
+
+    <div class="site-panel" aria-hidden="true">
+        <!-- photo goes here -->
+        <p class="site-panel-text" id="site-panel-text"></p>
+        <p class="site-copyright">&copy; <span id="year"></span> Michael Val Moratalla</p>
+    </div>
+
+    <img src="images/logo.png" class="site-logo" alt="Michael Val Moratalla logo">
+
+    <nav class="hero-links" id="hero-nav" aria-label="Primary">
+        <a href="#about" data-nav="about">About</a>
+        <a href="#skills" data-nav="skills">Skills</a>
+        <a href="#work" data-nav="work">Work</a>
+        <a href="#contact" data-nav="contact">Contact</a>
+    </nav>
+
+    <div class="site-content">
+    <header class="hero" id="hero">
+        <div class="hero-intro">
+            <h1 class="hero-name">Michael Val Moratalla</h1>
+            <p class="hero-title"><span class="accent">Software Engineer</span> based in Quezon City, PH</p>
         </div>
     </header>
 
-    <main>
+    <main id="main">
         <section id="about" class="section reveal">
             <h2>About</h2>
             <p class="about-text">
-                I'm Val — a Mobile App Developer who loves clean design and shipping products
-                people actually use. Over the past decade I've built and led mobile apps from scratch to
-                production across iOS and cross-platform with Flutter and React Native. Got an app idea in mind?
+                I'm Val — a Software Engineer who loves clean design and shipping products
+                people actually use. Over the past decade I've built and led products from scratch to
+                production across mobile and web, working with <span class="accent">Swift, Flutter, React Native, and modern web stacks</span>. Got a project in mind?
                 Let's grab a coffee and talk it through.
             </p>
-            <ul class="social-links">
-                <li class="stagger-item"><a href="mailto:aakocval@gmail.com">Email</a></li>
-                <li class="stagger-item"><a href="https://www.linkedin.com/in/valmoratalla/" target="_blank" rel="noopener">LinkedIn</a></li>
-                <li class="stagger-item"><a href="https://www.facebook.com/val.moratalla" target="_blank" rel="noopener">Facebook</a></li>
-            </ul>
-        </section>
-
-        <section id="experience" class="section reveal">
-            <h2>Experience</h2>
-            <ul class="experience-list">
-                <li class="stagger-item">
-                    <div class="experience-head">
-                        <span class="experience-role">Mobile App Developer</span>
-                        <span class="experience-period">Nov 2020 — Present</span>
-                    </div>
-                    <span class="experience-company">Yoonet Pty Ltd. Inc.</span>
-                    <p>Developed scalable mobile applications. Reviewed client requirements, mockups, and designs to ensure technical feasibility and alignment with project goals. Documented software requirements and maintained clear technical documentation for new and existing features.</p>
-                </li>
-                <li class="stagger-item">
-                    <div class="experience-head">
-                        <span class="experience-role">iOS Developer</span>
-                        <span class="experience-period">May 2019 — Jul 2020</span>
-                    </div>
-                    <span class="experience-company">Thirty One Digital</span>
-                    <p>Developed and maintained various iOS apps. Assisted in implementing code standards for a more readable codebase. Documented software requirements for new and existing features.</p>
-                </li>
-                <li class="stagger-item">
-                    <div class="experience-head">
-                        <span class="experience-role">Frontend Developer</span>
-                        <span class="experience-period">Jul 2016 — Apr 2019</span>
-                    </div>
-                    <span class="experience-company">Thirty One Digital</span>
-                    <p>Developed multiple websites and rich media banners using the latest web technologies.</p>
-                </li>
-                <li class="stagger-item">
-                    <div class="experience-head">
-                        <span class="experience-role">Programmer</span>
-                        <span class="experience-period">May 2015 — May 2016</span>
-                    </div>
-                    <span class="experience-company">Alfafusion</span>
-                    <p>Developed and maintained several websites and systems.</p>
-                </li>
-            </ul>
         </section>
 
         <section id="skills" class="section reveal">
             <h2>Skills</h2>
             <div class="skill-group stagger-item">
-                <h3>Mobile Development</h3>
+                <h3>Languages</h3>
                 <ul class="skills-list">
                     <li>Swift</li>
+                    <li>Dart</li>
+                    <li>TypeScript</li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                    <li>SQL</li>
+                    <li>Python</li>
+                </ul>
+            </div>
+            <div class="skill-group stagger-item">
+                <h3>Mobile Development</h3>
+                <ul class="skills-list">
+                    <li>iOS</li>
+                    <li>Swift</li>
+                    <li>SwiftUI</li>
+                    <li>UIKit</li>
                     <li>Flutter</li>
                     <li>Dart</li>
                     <li>React Native</li>
@@ -108,12 +91,49 @@
                 </ul>
             </div>
             <div class="skill-group stagger-item">
+                <h3>Web</h3>
+                <ul class="skills-list">
+                    <li>React</li>
+                    <li>Next.js</li>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>Tailwind CSS</li>
+                    <li>WordPress</li>
+                    <li>Node.js</li>
+                    <li>Express.js</li>
+                    <li>Laravel</li>
+                    <li>RESTful APIs</li>
+                    <li>GraphQL</li>
+                    <li>Firebase</li>
+                    <li>Supabase</li>
+                </ul>
+            </div>
+            <div class="skill-group stagger-item">
+                <h3>Architecture &amp; Design</h3>
+                <ul class="skills-list">
+                    <li>MVVM</li>
+                    <li>Clean Architecture</li>
+                    <li>MVC</li>
+                    <li>Modular Architecture</li>
+                </ul>
+            </div>
+            <div class="skill-group stagger-item">
                 <h3>Frameworks &amp; Libraries</h3>
                 <ul class="skills-list">
                     <li>Firebase</li>
                     <li>Realm</li>
                     <li>Google Maps</li>
                     <li>Mapbox</li>
+                </ul>
+            </div>
+            <div class="skill-group stagger-item">
+                <h3>Databases</h3>
+                <ul class="skills-list">
+                    <li>Realm</li>
+                    <li>MySQL</li>
+                    <li>PostgreSQL</li>
+                    <li>MongoDB</li>
+                    <li>Firebase Firestore</li>
                 </ul>
             </div>
             <div class="skill-group stagger-item">
@@ -135,6 +155,10 @@
             <div class="skill-group stagger-item">
                 <h3>CI/CD &amp; DevOps</h3>
                 <ul class="skills-list">
+                    <li>AWS</li>
+                    <li>Docker</li>
+                    <li>CI/CD</li>
+                    <li>Git</li>
                     <li>Fastlane</li>
                     <li>Bitrise</li>
                     <li>Xcode Cloud</li>
@@ -149,6 +173,18 @@
                 </ul>
             </div>
             <div class="skill-group stagger-item">
+                <h3>Testing</h3>
+                <ul class="skills-list">
+                    <li>XCTest</li>
+                    <li>Swift Testing</li>
+                    <li>Quick/Nimble</li>
+                    <li>Flutter Test</li>
+                    <li>Mockito</li>
+                    <li>Detox</li>
+                    <li>PHPUnit</li>
+                </ul>
+            </div>
+            <div class="skill-group stagger-item">
                 <h3>Tools</h3>
                 <ul class="skills-list">
                     <li>Jira</li>
@@ -156,6 +192,7 @@
                     <li>Figma</li>
                     <li>Claude AI</li>
                     <li>ChatGPT</li>
+                    <li>Antigravity</li>
                     <li>Cursor AI</li>
                     <li>Xcode</li>
                     <li>Android Studio</li>
@@ -167,15 +204,24 @@
             </div>
         </section>
 
-        <section id="projects" class="section reveal">
-            <h2>Projects</h2>
-            <ul class="projects-list" id="projects-list"></ul>
+        <section id="work" class="section reveal">
+            <h2>Work</h2>
+            <div class="projects-viewport">
+                <ul class="projects-list" id="projects-list"></ul>
+            </div>
+        </section>
+
+        <section id="contact" class="section reveal contact-section">
+            <h2>Contact</h2>
+            <p class="contact-statement">Interested in working together? Or just want to say hello?</p>
+            <a href="mailto:aakocval@gmail.com" class="contact-email">aakocval@gmail.com</a>
+            <ul class="social-links contact-social">
+                <li><a href="https://www.linkedin.com/in/valmoratalla/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://www.facebook.com/val.moratalla" target="_blank" rel="noopener">Facebook</a></li>
+            </ul>
         </section>
     </main>
-
-    <footer class="footer">
-        <p>&copy; <span id="year"></span> Michael Val Moratalla</p>
-    </footer>
+    </div>
 
     <script src="js/app.js"></script>
 </body>
