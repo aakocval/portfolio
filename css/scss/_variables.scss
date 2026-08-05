@@ -3,12 +3,18 @@ $black: #1d1d1f;
 $dblack: #ffffff;
 $white: #1d1d1f;
 $gray: #6e6e73;
-$lgray: #86868b;
+$lgray: #767676; // WCAG AA: 4.54:1 against white (was #86868b at 3.62:1, failing 4.5:1 for body text)
 $border: #d2d2d7;
-$blue: #0071e3;
 
-$colorOne: #017EA7;
-$colorTwo: #7e3be3;
-$colorThree: #ffc41d;
-$colorFour: #0bc1f2;
-$colorFive: #f47f20;
+$red: #b81828;
+$reddark: #8a121e;
+$charcoal: #585858;
+$charcoaldark: #2b2b2d;
+$lightgray: #d0d0d0;
+$blue: $red;
+
+$colorOne: $red;
+$colorTwo: $charcoal;
+$colorThree: $reddark;
+$colorFour: $charcoal;
+$colorFive: $red;

@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 html,
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
@@ -6,14 +12,54 @@ body {
     scroll-behavior: smooth;
 }
 
+html {
+    font-size: 112.5%;
+    scroll-snap-type: y proximity;
+}
+
+.hero,
+.section {
+    scroll-snap-align: start;
+}
+
 a {
     color: inherit;
     text-decoration: none;
 }
 
-h1, h2 {
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid $red;
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 1rem;
+    z-index: 1000;
+    padding: 0.75rem 1.25rem;
+    background: $red;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 0.9rem;
     font-weight: 600;
-    letter-spacing: -0.02em;
+    transition: top 0.2s ease;
+
+    &:focus {
+        top: 1rem;
+    }
+}
+
+h1, h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.accent {
+    color: $red;
 }
 
 .reveal {
@@ -55,15 +101,55 @@ h1, h2 {
     }
 }
 
+.site-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 35%;
+    height: 100vh;
+    background: $charcoaldark;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.site-panel-text {
+    max-width: 380px;
+    margin: 0;
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 1.3;
+    color: rgba(255, 255, 255, 0.85);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.site-copyright {
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.85rem;
+}
+
+.site-content {
+    width: 65%;
+    padding: 0 4rem 0 7rem;
+}
+
 .hero {
     min-height: 100vh;
     display: flex;
-    align-items: center;
-    padding: 2rem 4rem;
+    flex-direction: column;
+    padding: 3rem 0;
     opacity: 0;
     transform: translateY(16px);
     transition: opacity 1s ease, transform 1s ease;
-    overflow: hidden;
 
     &.is-visible {
         opacity: 1;
@@ -71,108 +157,117 @@ h1, h2 {
     }
 }
 
-.hero-inner {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.hero-intro {
+    margin: auto 0;
 }
 
-.hero-content {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.hero-logo {
-    width: 72px;
-    margin-bottom: 1.5rem;
+.site-logo {
+    position: fixed;
+    top: 2.5rem;
+    left: 3rem;
+    z-index: 50;
+    width: 34px;
     cursor: pointer;
 }
 
 .hero-name {
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 
 .hero-title {
-    margin-top: 0.5rem;
+    margin-top: 0.6rem;
     font-size: 1.2rem;
     color: $lgray;
 }
 
 .hero-links {
-    margin-top: 2.5rem;
+    position: fixed;
+    top: 2.5rem;
+    right: 3rem;
+    z-index: 50;
     display: flex;
-    gap: 0.5rem;
-    padding: 0.4rem;
-    border: 1px solid $border;
-    border-radius: 999px;
-    background: #fafafa;
+    align-items: center;
+    gap: 1.75rem;
 
     a {
-        color: $gray;
-        font-size: 0.9rem;
-        padding: 0.5rem 1.1rem;
-        border-radius: 999px;
-        transition: color 0.3s ease, background 0.3s ease;
+        color: rgba(255, 255, 255, 0.65);
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: color 0.3s ease;
 
         &:hover {
-            color: $white;
-            background: #efeff0;
+            color: #fff;
         }
 
         &.active {
-            color: $white;
-            background: #efeff0;
+            color: $red;
+            font-weight: 600;
         }
     }
 }
 
-main {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
 .section {
-    padding: 6rem 0;
-    border-top: 1px solid $border;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 0;
 
     h2 {
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
+        font-size: 2.75rem;
+        margin-bottom: 2rem;
     }
 }
 
-.about-logo {
-    width: 40px;
-    margin-bottom: 1.25rem;
-    cursor: pointer;
-}
-
 .about-text {
-    font-size: 1.15rem;
-    line-height: 1.6;
+    font-size: 1.35rem;
+    line-height: 1.7;
     color: $lgray;
 }
 
 .social-links {
-    margin-top: 2rem;
     display: flex;
     gap: 1.5rem;
 
     a {
-        color: $blue;
-        font-size: 1rem;
-        transition: opacity 0.3s ease;
+        color: $gray;
+        font-size: 0.9rem;
+        transition: color 0.3s ease;
 
         &:hover {
-            opacity: 0.7;
+            color: $red;
         }
     }
+}
+
+.contact-section {
+    text-align: left;
+}
+
+.contact-statement {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 2.25rem;
+    font-weight: 500;
+    line-height: 1.35;
+    max-width: 520px;
+}
+
+.contact-email {
+    display: inline-block;
+    margin-top: 1.75rem;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.85rem;
+    font-weight: 600;
+    color: $red;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+        opacity: 0.75;
+    }
+}
+
+.contact-social {
+    margin-top: 2.5rem;
 }
 
 .experience-list {
@@ -255,50 +350,95 @@ main {
 }
 
 .projects-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
 }
 
 .project-item {
     a,
     div {
-        display: block;
-        padding: 1.5rem;
-        border: 1px solid $border;
-        border-radius: 18px;
-        background: #fafafa;
-        transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 1 / 1;
+        height: 100%;
+        padding: 1.25rem;
+        border-radius: 16px;
+        color: #fff;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     a:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+        transform: translateY(-4px);
+        box-shadow: 0 20px 32px -12px rgba(0, 0, 0, 0.35);
     }
 
-    &.one a:hover { border-color: $colorOne; }
-    &.two a:hover { border-color: $colorTwo; }
-    &.three a:hover { border-color: $colorThree; }
-    &.four a:hover { border-color: $colorFour; }
-    &.five a:hover { border-color: $colorFive; }
+    &.one a, &.one div { background: $colorOne; }
+    &.two a, &.two div { background: $colorTwo; }
+    &.three a, &.three div { background: $colorThree; }
+    &.four a, &.four div { background: $colorFour; }
+    &.five a, &.five div { background: $colorFive; }
+}
+
+.project-icon {
+    position: absolute;
+    top: -16%;
+    right: -12%;
+    width: 75%;
+    max-height: 130%;
+    object-fit: contain;
+    opacity: 0.28;
+    filter: brightness(0) invert(1);
+    -webkit-mask-image: radial-gradient(circle at 70% 30%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 45%, rgba(0, 0, 0, 0) 75%);
+    mask-image: radial-gradient(circle at 70% 30%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 45%, rgba(0, 0, 0, 0) 75%);
+    pointer-events: none;
+    z-index: 0;
 }
 
 .project-name {
+    position: relative;
+    z-index: 1;
     display: block;
-    font-size: 1.25rem;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.15rem;
     font-weight: 600;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.35rem;
 }
 
 .project-desc {
+    position: relative;
+    z-index: 1;
     display: block;
-    color: $lgray;
-    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.8rem;
 }
 
-.footer {
-    text-align: center;
-    padding: 3rem 2rem;
-    color: $gray;
-    font-size: 0.85rem;
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+        scroll-snap-type: none;
+    }
+
+    .hero,
+    .reveal,
+    .stagger-item,
+    .project-item a,
+    .contact-email,
+    .social-links a,
+    .hero-links a {
+        transition: none !important;
+    }
+
+    .hero,
+    .reveal,
+    .stagger-item {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    // Auto-scroll itself is suppressed in JS when this preference is set;
+    // the projects list already falls back to plain native horizontal scrolling.
 }
