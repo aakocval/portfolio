@@ -172,9 +172,32 @@ function initNavHighlight() {
 function initLogoRefresh() {
     document.querySelectorAll('.site-logo').forEach(function (logo) {
         logo.addEventListener('click', function () {
-            location.reload();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     });
+}
+
+function initTopbarAutoHide() {
+    var bar = document.getElementById('site-topbar');
+    if (!bar) return;
+    var mq = window.matchMedia('(max-width: 900px)');
+    var lastY = window.scrollY;
+    function update() {
+        if (!mq.matches) {
+            bar.classList.remove('is-hidden');
+            lastY = window.scrollY;
+            return;
+        }
+        var currentY = window.scrollY;
+        if (currentY > lastY && currentY > 80) {
+            bar.classList.add('is-hidden');
+        } else {
+            bar.classList.remove('is-hidden');
+        }
+        lastY = currentY;
+    }
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
 }
 
 // Placeholder copy — swap for real per-section text/imagery later.
@@ -346,6 +369,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initScrollProgress();
     initNavHighlight();
     initLogoRefresh();
+    initTopbarAutoHide();
     initPanelText();
     initProjectColorShuffle();
     var yearEl = document.getElementById('year');

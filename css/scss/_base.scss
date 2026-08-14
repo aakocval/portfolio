@@ -14,12 +14,6 @@ body {
 
 html {
     font-size: 112.5%;
-    scroll-snap-type: y proximity;
-}
-
-.hero,
-.section {
-    scroll-snap-align: start;
 }
 
 a {
@@ -140,6 +134,7 @@ h1, h2 {
 .site-content {
     width: 65%;
     padding: 0 4rem 0 7rem;
+    overflow-x: clip;
 }
 
 .hero {
@@ -391,6 +386,7 @@ h1, h2 {
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
+    overscroll-behavior-x: contain;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;

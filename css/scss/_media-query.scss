@@ -3,13 +3,33 @@
         display: none;
     }
 
-    .site-logo {
-        display: none;
-    }
-
     .site-content {
         width: 100%;
         padding: 0 1.5rem;
+    }
+
+    .site-topbar {
+        position: sticky;
+        top: 0;
+        z-index: 55;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1rem 1.5rem;
+        background: $dblack;
+        transition: transform 0.3s ease;
+
+        &.is-hidden {
+            transform: translateY(-100%);
+        }
+    }
+
+    .site-logo {
+        position: static;
+        display: block;
+        width: 32px;
+        margin: 0;
     }
 
     .hero {
@@ -19,15 +39,22 @@
         padding: 3rem 0 2rem;
     }
 
+    .section {
+        min-height: auto;
+        justify-content: flex-start;
+    }
+
     .hero-links {
         position: static;
-        margin-top: 0;
-        padding: 1.5rem 0;
-        justify-content: center;
-        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        gap: 1.1rem;
+        justify-content: flex-end;
+        flex-wrap: nowrap;
 
         a {
             color: $gray;
+            font-size: 0.85rem;
 
             &:hover {
                 color: $black;
@@ -40,7 +67,17 @@
     }
 }
 
+@media (min-width: 700px) and (max-width: 900px) {
+    .projects-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media (max-width: 600px) {
+    html {
+        font-size: 100%;
+    }
+
     .hero-name {
         font-size: 2.2rem;
     }
@@ -51,6 +88,23 @@
 
     .section {
         padding: 4rem 0;
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.25rem;
+        }
+    }
+
+    .about-text {
+        font-size: 1.05rem;
+    }
+
+    .contact-statement {
+        font-size: 1.75rem;
+    }
+
+    .contact-email {
+        font-size: 1.5rem;
     }
 
     .projects-list {
