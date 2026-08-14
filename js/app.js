@@ -134,7 +134,7 @@ function initReveal() {
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.15 });
+    }, { threshold: 0 });
     sections.forEach(function (el) { observer.observe(el); });
 }
 
@@ -359,7 +359,7 @@ function initProjectColorShuffle() {
                 item.classList.add(palette[Math.floor(Math.random() * palette.length)]);
             });
         });
-    }, { threshold: 0.2 });
+    }, { threshold: 0 });
     observer.observe(work);
 }
 
