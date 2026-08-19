@@ -207,7 +207,7 @@ var panelCopy = {
         'Turning ideas into products.',
         'Code, coffee, repeat.',
         'Mobile and web, end to end.',
-        'Software Engineer, always shipping.',
+        'Software Developer, always shipping.',
         'Pixels on the outside, logic underneath.',
         'From idea to App Store, and back again.',
         'Ten years in, still shipping on Fridays.',
