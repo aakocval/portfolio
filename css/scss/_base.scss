@@ -10,6 +10,7 @@ body {
     background: $dblack;
     color: $white;
     scroll-behavior: smooth;
+    user-select: none;
 }
 
 html {
@@ -124,11 +125,18 @@ h1, h2 {
 
 .site-copyright {
     position: absolute;
-    right: 2rem;
-    bottom: 2rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    padding-right: 3px;
     margin: 0;
     color: rgba(255, 255, 255, 0.55);
-    font-size: 0.85rem;
+    font-size: 0.7rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    &.is-visible {
+        opacity: 1;
+    }
 }
 
 .site-content {
@@ -158,11 +166,23 @@ h1, h2 {
 
 .site-logo {
     position: fixed;
-    top: 2.5rem;
-    left: 3rem;
+    top: 1.5rem;
+    left: 1.5rem;
     z-index: 50;
     width: 34px;
     cursor: pointer;
+    // Driven by initLogoScrollRotate: 0 at the top of the hero, 1 once the
+    // About section is reached. Rotates the logo into an upward chevron and
+    // shrinks it as it settles bottom-left, so it doubles as a scroll-to-top cue.
+    // Rotation/scale pivot from the (default) center, which shrinks the box
+    // inward on all sides — translateX/translateY below cancel that inward
+    // drift so the left edge stays flush at 1.5rem throughout, and the
+    // bottom edge lands exactly at 1.5rem once progress reaches 1, matching
+    // the copyright's inset on the opposite corner. Logo renders at 34px
+    // wide by its natural 603:438 ratio, i.e. ~24.7px tall.
+    --logo-progress: 0;
+    transform: translateX(calc(-5.95px * var(--logo-progress))) translateY(calc((100vh - 3rem - 20.4px) * var(--logo-progress))) rotate(calc(180deg * var(--logo-progress))) scale(calc(1 - 0.35 * var(--logo-progress)));
+    transition: transform 0.1s linear;
 }
 
 .hero-name {
@@ -177,8 +197,9 @@ h1, h2 {
 
 .hero-links {
     position: fixed;
-    top: 2.5rem;
-    right: 3rem;
+    top: 1.5rem;
+    right: 1.5rem;
+    padding-right: 3px;
     z-index: 50;
     display: flex;
     align-items: center;
@@ -196,7 +217,6 @@ h1, h2 {
 
         &.active {
             color: $red;
-            font-weight: 600;
         }
     }
 }
@@ -351,6 +371,10 @@ h1, h2 {
 }
 
 .project-item {
+    // Without this, the aspect-ratio box's intrinsic size can force a 1fr
+    // grid track wider than the space actually available (grid blowout).
+    min-width: 0;
+
     a,
     div {
         display: flex;
@@ -463,7 +487,8 @@ h1, h2 {
     .project-item a,
     .contact-email,
     .social-links a,
-    .hero-links a {
+    .hero-links a,
+    .site-logo {
         transition: none !important;
     }
 

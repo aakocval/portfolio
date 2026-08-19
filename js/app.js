@@ -169,6 +169,22 @@ function initNavHighlight() {
     sections.forEach(function (el) { observer.observe(el); });
 }
 
+function initCopyrightVisibility() {
+    var copyright = document.querySelector('.site-copyright');
+    var contact = document.getElementById('contact');
+    if (!copyright || !contact) return;
+    if (!('IntersectionObserver' in window)) {
+        copyright.classList.add('is-visible');
+        return;
+    }
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            copyright.classList.toggle('is-visible', entry.isIntersecting);
+        });
+    }, { rootMargin: '-45% 0px -45% 0px' });
+    observer.observe(contact);
+}
+
 function initLogoRefresh() {
     document.querySelectorAll('.site-logo').forEach(function (logo) {
         logo.addEventListener('click', function () {
@@ -196,6 +212,25 @@ function initTopbarAutoHide() {
         }
         lastY = currentY;
     }
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+}
+
+function initLogoScrollRotate() {
+    var logo = document.querySelector('.site-logo');
+    var about = document.getElementById('about');
+    if (!logo || !about) return;
+    var mq = window.matchMedia('(min-width: 901px)');
+    function update() {
+        if (!mq.matches) {
+            logo.style.removeProperty('--logo-progress');
+            return;
+        }
+        var end = about.offsetTop;
+        var progress = end > 0 ? Math.min(Math.max(window.scrollY / end, 0), 1) : 0;
+        logo.style.setProperty('--logo-progress', progress);
+    }
+    update();
     window.addEventListener('scroll', update, { passive: true });
     window.addEventListener('resize', update);
 }
@@ -368,8 +403,10 @@ document.addEventListener('DOMContentLoaded', function () {
     initReveal();
     initScrollProgress();
     initNavHighlight();
+    initCopyrightVisibility();
     initLogoRefresh();
     initTopbarAutoHide();
+    initLogoScrollRotate();
     initPanelText();
     initProjectColorShuffle();
     var yearEl = document.getElementById('year');
