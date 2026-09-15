@@ -7,17 +7,9 @@ var projects = [
         link: 'https://apps.apple.com/ph/app/mwell-ph-24-7-doctor-consult/id1540729485',
         icon: 'images/logos/mWell.png',
         screenshots: ['images/work/mWell/1.jpg', 'images/work/mWell/2.jpg', 'images/work/mWell/3.jpg', 'images/work/mWell/4.jpg', 'images/work/mWell/5.jpg', 'images/work/mWell/6.jpg'],
-        misc: 'six'
-    },
-    {
-        name: 'Phoenix Live',
-        description: 'Precision tools for modern agriculture.',
-        responsibilities: 'Maintain and add new features.',
-        technology: 'Swift, MVVM, Alamofire, Realm, Fastlane, Mapbox, Localization, Unit Testing',
-        link: 'https://apps.apple.com/au/app/phoenix-live/id1503981683',
-        icon: 'images/logos/Phoenix Live.png',
-        screenshots: ['images/work/PhoenixLive/1.jpg', 'images/work/PhoenixLive/2.jpg', 'images/work/PhoenixLive/3.jpg', 'images/work/PhoenixLive/4.jpg', 'images/work/PhoenixLive/5.jpg', 'images/work/PhoenixLive/6.jpg'],
-        misc: 'four'
+        misc: 'six',
+        rating: { score: 4.6, count: 779 },
+        downloads: '1M+'
     },
     {
         name: 'Intro.u',
@@ -26,7 +18,8 @@ var projects = [
         technology: 'SwiftUI, MVVM-C, Google Maps, In-app Purchase, Unit Testing',
         link: 'https://apps.apple.com/ph/app/intro-u-real-connections/id6758976647',
         screenshots: ['images/work/IntroU/1.jpg', 'images/work/IntroU/2.jpg', 'images/work/IntroU/3.jpg', 'images/work/IntroU/4.jpg', 'images/work/IntroU/5.jpg', 'images/work/IntroU/6.jpg'],
-        misc: 'one'
+        misc: 'one',
+        rating: { score: 5.0, count: 1 }
     },
     {
         name: 'PnutGo',
@@ -35,7 +28,8 @@ var projects = [
         technology: 'SwiftUI, MVVM-C, Google Maps, In-app Purchase, Unit Testing',
         link: 'https://apps.apple.com/au/app/pnutgo-collect-cute-animals/id6755419201',
         screenshots: ['images/work/PnutGo/1.jpg', 'images/work/PnutGo/2.jpg', 'images/work/PnutGo/3.jpg', 'images/work/PnutGo/4.jpg', 'images/work/PnutGo/5.jpg', 'images/work/PnutGo/6.jpg'],
-        misc: 'two'
+        misc: 'two',
+        rating: { score: 5.0, count: 1 }
     },
     {
         name: 'CabinKeep',
@@ -45,7 +39,8 @@ var projects = [
         link: 'https://apps.apple.com/au/app/cabinkeep-house-management/id6755082635',
         icon: 'images/logos/CabinKeep.png',
         screenshots: ['images/work/CabinKeep/1.jpg', 'images/work/CabinKeep/2.jpg', 'images/work/CabinKeep/3.jpg', 'images/work/CabinKeep/4.jpg'],
-        misc: 'three'
+        misc: 'three',
+        rating: { score: 5.0, count: 2 }
     },
     {
         name: 'Symptly',
@@ -54,7 +49,8 @@ var projects = [
         technology: 'SwiftUI, MVVM, Codable, In-app Purchase',
         link: 'https://apps.apple.com/au/app/symptly/id6751874212',
         screenshots: ['images/work/Symptly/1.jpg', 'images/work/Symptly/2.jpg', 'images/work/Symptly/3.jpg', 'images/work/Symptly/4.jpg', 'images/work/Symptly/5.jpg', 'images/work/Symptly/6.jpg'],
-        misc: 'four'
+        misc: 'four',
+        rating: { score: 4.9, count: 7 }
     },
     {
         name: 'Zero2Seventeen',
@@ -73,7 +69,8 @@ var projects = [
         link: 'https://apps.apple.com/au/app/pinch-share-edit/id6475806094',
         icon: 'images/logos/Pinch.png',
         screenshots: ['images/work/Pinch/1.jpg', 'images/work/Pinch/2.jpg', 'images/work/Pinch/3.jpg', 'images/work/Pinch/4.jpg', 'images/work/Pinch/5.jpg', 'images/work/Pinch/6.jpg'],
-        misc: 'six'
+        misc: 'six',
+        rating: { score: 5.0, count: 10 }
     },
     {
         name: 'TrackNav',
@@ -91,7 +88,19 @@ var projects = [
         technology: 'SwiftUI, MVVM-C, Unit Testing',
         link: 'https://apps.apple.com/au/app/dyna/id6740112615',
         screenshots: ['images/work/Dyna/1.jpg', 'images/work/Dyna/2.jpg', 'images/work/Dyna/3.jpg', 'images/work/Dyna/4.jpg', 'images/work/Dyna/5.jpg', 'images/work/Dyna/6.jpg'],
-        misc: 'two'
+        misc: 'two',
+        rating: { score: 5.0, count: 10 }
+    },
+    {
+        name: 'Phoenix Live',
+        description: 'Precision tools for modern agriculture.',
+        responsibilities: 'Maintain and add new features.',
+        technology: 'Swift, MVVM, Alamofire, Realm, Fastlane, Mapbox, Localization, Unit Testing',
+        link: 'https://apps.apple.com/au/app/phoenix-live/id1503981683',
+        icon: 'images/logos/Phoenix Live.png',
+        screenshots: ['images/work/PhoenixLive/1.jpg', 'images/work/PhoenixLive/2.jpg', 'images/work/PhoenixLive/3.jpg', 'images/work/PhoenixLive/4.jpg', 'images/work/PhoenixLive/5.jpg', 'images/work/PhoenixLive/6.jpg'],
+        misc: 'four',
+        rating: { score: 4.3, count: 7 }
     }
 ];
 
@@ -109,12 +118,22 @@ function renderProjects() {
             }).join('');
             gallery = '<span class="project-gallery">' + shots + '</span><span class="project-shade"></span>';
         }
+        var stats = '';
+        if (project.downloads) {
+            stats += '<span class="project-stat">' + project.downloads + ' downloads</span>';
+        }
+        if (project.rating) {
+            var ratingLabel = project.rating.count === 1 ? 'rating' : 'ratings';
+            stats += '<span class="project-stat">★ ' + project.rating.score.toFixed(1) + ' · ' + project.rating.count + ' ' + ratingLabel + '</span>';
+        }
+        var statsMarkup = stats ? '<span class="project-stats">' + stats + '</span>' : '';
         return (
             '<li class="project-item stagger-item ' + project.misc + '">' +
             '<' + tag + linkAttrs + '>' +
             gallery +
             '<span class="project-name">' + project.name + '</span>' +
             '<span class="project-desc">' + project.description + '</span>' +
+            statsMarkup +
             '</' + tag + '>' +
             '</li>'
         );
@@ -185,6 +204,36 @@ function initCopyrightVisibility() {
     observer.observe(contact);
 }
 
+var heroRoles = [
+    'Senior iOS Developer',
+    'Software Developer',
+    'Coffee Lover',
+    'Mobile App Builder',
+    'Swift Enthusiast',
+    'Product-Minded Engineer',
+    'iOS Craftsman',
+    'Bug Whisperer',
+    'Xcode Regular',
+    'Full-Time Shipper',
+    'Pixel Perfectionist',
+    'Weekend Tinkerer',
+    'Professional Cmd+S-er'
+];
+
+function initHeroRoleRotation() {
+    var els = document.querySelectorAll('.hero-role');
+    if (!els.length || heroRoles.length < 2) return;
+    var index = 0;
+    setInterval(function () {
+        index = (index + 1) % heroRoles.length;
+        els.forEach(function (el) { el.style.opacity = 0; });
+        setTimeout(function () {
+            els.forEach(function (el) { el.textContent = heroRoles[index]; });
+            els.forEach(function (el) { el.style.opacity = 1; });
+        }, 300);
+    }, 6000);
+}
+
 function initLogoRefresh() {
     document.querySelectorAll('.site-logo').forEach(function (logo) {
         logo.addEventListener('click', function () {
@@ -218,15 +267,15 @@ function initTopbarAutoHide() {
 
 function initLogoScrollRotate() {
     var logo = document.querySelector('.site-logo');
-    var about = document.getElementById('about');
-    if (!logo || !about) return;
+    var work = document.getElementById('work');
+    if (!logo || !work) return;
     var mq = window.matchMedia('(min-width: 901px)');
     function update() {
         if (!mq.matches) {
             logo.style.removeProperty('--logo-progress');
             return;
         }
-        var end = about.offsetTop;
+        var end = work.offsetTop;
         var progress = end > 0 ? Math.min(Math.max(window.scrollY / end, 0), 1) : 0;
         logo.style.setProperty('--logo-progress', progress);
     }
@@ -237,7 +286,7 @@ function initLogoScrollRotate() {
 
 // Placeholder copy — swap for real per-section text/imagery later.
 var panelCopy = {
-    hero: [
+    about: [
         'Building things that ship.',
         'Turning ideas into products.',
         'Code, coffee, repeat.',
@@ -257,9 +306,7 @@ var panelCopy = {
         'Where design meets a bit of engineering.',
         'A portfolio, still very much in progress.',
         'Powered by curiosity and too much coffee.',
-        'Somewhere between Xcode and a text editor.'
-    ],
-    about: [
+        'Somewhere between Xcode and a text editor.',
         'Getting to know the human behind the code.',
         'A decade of shipping mobile and web.',
         'Based in Quezon City, working worldwide.',
@@ -368,7 +415,7 @@ function initPanelText() {
             panelText.style.opacity = 1;
         }, 300);
     }
-    var targets = document.querySelectorAll('.hero, main .section');
+    var targets = document.querySelectorAll('main .section');
     var observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
             if (entry.isIntersecting) {
@@ -377,7 +424,7 @@ function initPanelText() {
         });
     }, { rootMargin: '-45% 0px -45% 0px' });
     targets.forEach(function (el) { observer.observe(el); });
-    setText('hero');
+    setText('about');
     panelText.style.opacity = 1;
 }
 
@@ -398,20 +445,62 @@ function initProjectColorShuffle() {
     observer.observe(work);
 }
 
+function initStatsCountUp() {
+    var section = document.querySelector('.about-stats');
+    var stats = document.querySelectorAll('.about-stats strong');
+    if (!section || !stats.length || !('IntersectionObserver' in window)) return;
+
+    function formatCount(num) {
+        if (num >= 1000000) {
+            return (num % 1000000 === 0 ? num / 1000000 : (num / 1000000).toFixed(1)) + 'M';
+        }
+        if (num >= 1000) {
+            return (num % 1000 === 0 ? num / 1000 : (num / 1000).toFixed(1)) + 'K';
+        }
+        return String(Math.floor(num));
+    }
+
+    function animate(el) {
+        var match = el.textContent.trim().match(/^(\d+(?:\.\d+)?)(K|M)?(.*)$/i);
+        if (!match) return;
+        var multiplier = /m/i.test(match[2]) ? 1000000 : /k/i.test(match[2]) ? 1000 : 1;
+        var target = parseFloat(match[1]) * multiplier;
+        var suffix = match[3];
+        var duration = 1400;
+        var start = null;
+        function step(timestamp) {
+            if (!start) start = timestamp;
+            var linear = Math.min((timestamp - start) / duration, 1);
+            var eased = 1 - Math.pow(1 - linear, 3);
+            el.textContent = formatCount(eased * target) + suffix;
+            if (linear < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            stats.forEach(animate);
+            observer.unobserve(entry.target);
+        });
+    }, { threshold: 0.4 });
+    observer.observe(section);
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     renderProjects();
     initReveal();
     initScrollProgress();
     initNavHighlight();
     initCopyrightVisibility();
+    initHeroRoleRotation();
     initLogoRefresh();
     initTopbarAutoHide();
     initLogoScrollRotate();
     initPanelText();
+    initStatsCountUp();
     initProjectColorShuffle();
     var yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
-    requestAnimationFrame(function () {
-        document.querySelector('.hero').classList.add('is-visible');
-    });
 });

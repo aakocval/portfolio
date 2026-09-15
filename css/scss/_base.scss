@@ -145,25 +145,6 @@ h1, h2 {
     overflow-x: clip;
 }
 
-.hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    padding: 3rem 0;
-    opacity: 0;
-    transform: translateY(16px);
-    transition: opacity 1s ease, transform 1s ease;
-
-    &.is-visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.hero-intro {
-    margin: auto 0;
-}
-
 .site-logo {
     position: fixed;
     top: 1.5rem;
@@ -171,8 +152,8 @@ h1, h2 {
     z-index: 50;
     width: 34px;
     cursor: pointer;
-    // Driven by initLogoScrollRotate: 0 at the top of the hero, 1 once the
-    // About section is reached. Rotates the logo into an upward chevron and
+    // Driven by initLogoScrollRotate: 0 at the top of the page, 1 once the
+    // Work section is reached. Rotates the logo into an upward chevron and
     // shrinks it as it settles bottom-left, so it doubles as a scroll-to-top cue.
     // Rotation/scale pivot from the (default) center, which shrinks the box
     // inward on all sides — translateX/translateY below cancel that inward
@@ -193,6 +174,11 @@ h1, h2 {
     margin-top: 0.6rem;
     font-size: 1.2rem;
     color: $lgray;
+}
+
+.hero-role {
+    display: inline-block;
+    transition: opacity 0.3s ease;
 }
 
 .hero-links {
@@ -238,6 +224,34 @@ h1, h2 {
     font-size: 1.35rem;
     line-height: 1.7;
     color: $lgray;
+}
+
+.about-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid $border;
+
+    li {
+        display: flex;
+        flex-direction: column;
+        gap: 0.15rem;
+    }
+
+    strong {
+        font-family: 'Fraunces', Georgia, serif;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: $black;
+        line-height: 1;
+    }
+
+    span {
+        font-size: 0.85rem;
+        color: $gray;
+    }
 }
 
 .social-links {
@@ -355,6 +369,9 @@ h1, h2 {
     gap: 0.75rem;
 
     li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
         padding: 0.5rem 1rem;
         border: 1px solid $border;
         border-radius: 999px;
@@ -475,13 +492,30 @@ h1, h2 {
     font-size: 0.8rem;
 }
 
+.project-stats {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+}
+
+.project-stat {
+    font-size: 0.72rem;
+    letter-spacing: 0.02em;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 999px;
+    padding: 0.2rem 0.6rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
         scroll-snap-type: none;
     }
 
-    .hero,
     .reveal,
     .stagger-item,
     .project-item a,
@@ -492,7 +526,6 @@ h1, h2 {
         transition: none !important;
     }
 
-    .hero,
     .reveal,
     .stagger-item {
         opacity: 1 !important;
