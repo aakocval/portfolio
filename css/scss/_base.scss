@@ -229,9 +229,11 @@ h1, h2 {
 .about-stats {
     display: flex;
     flex-wrap: wrap;
-    gap: 2.5rem;
+    width: fit-content;
+    max-width: 100%;
+    gap: 2rem;
     margin-top: 2rem;
-    padding-top: 2rem;
+    padding-top: 1.5rem;
     border-top: 1px solid $border;
 
     li {

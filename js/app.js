@@ -107,7 +107,15 @@ var projects = [
 function renderProjects() {
     var list = document.getElementById('projects-list');
     if (!list) return;
-    list.innerHTML = projects.map(function (project) {
+    var sorted = projects.slice().sort(function (a, b) {
+        var aCount = a.rating ? a.rating.count : -1;
+        var bCount = b.rating ? b.rating.count : -1;
+        if (aCount !== bCount) return bCount - aCount;
+        var aScore = a.rating ? a.rating.score : 0;
+        var bScore = b.rating ? b.rating.score : 0;
+        return bScore - aScore;
+    });
+    list.innerHTML = sorted.map(function (project) {
         var tag = project.link ? 'a' : 'div';
         var linkAttrs = project.link ? ' href="' + project.link + '" target="_blank" rel="noopener"' : '';
         var gallery = '';
@@ -471,8 +479,7 @@ function initStatsCountUp() {
         function step(timestamp) {
             if (!start) start = timestamp;
             var linear = Math.min((timestamp - start) / duration, 1);
-            var eased = 1 - Math.pow(1 - linear, 3);
-            el.textContent = formatCount(eased * target) + suffix;
+            el.textContent = formatCount(linear * target) + suffix;
             if (linear < 1) requestAnimationFrame(step);
         }
         requestAnimationFrame(step);
