@@ -101,6 +101,13 @@ var projects = [
         screenshots: ['images/work/PhoenixLive/1.jpg', 'images/work/PhoenixLive/2.jpg', 'images/work/PhoenixLive/3.jpg', 'images/work/PhoenixLive/4.jpg', 'images/work/PhoenixLive/5.jpg', 'images/work/PhoenixLive/6.jpg'],
         misc: 'four',
         rating: { score: 4.3, count: 7 }
+    },
+    {
+        name: 'Salt Diary',
+        description: 'The data-driven fishing diary.',
+        link: 'https://apps.apple.com/ph/app/salt-diary/id6780346074',
+        screenshots: ['images/work/SaltDiary/1.jpg', 'images/work/SaltDiary/2.jpg', 'images/work/SaltDiary/3.jpg', 'images/work/SaltDiary/4.jpg', 'images/work/SaltDiary/5.jpg'],
+        misc: 'three'
     }
 ];
 
