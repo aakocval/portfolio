@@ -38,7 +38,7 @@ The page is a single vertically-scrolling document, not a set of sliding panels.
 - **`.site-panel`** — fixed side panel (dark, right-hand rail) showing rotating one-line copy (`panelCopy` in `js/app.js`, keyed by section id) that changes as each section scrolls into view, plus a copyright line that only shows while the Contact section is visible (`initCopyrightVisibility()`).
 - **`main#main`** — the actual content: `.section` elements (`#about`, `#work`, `#skills`, `#contact`) each fade in via a `.reveal`/`.is-visible` class pair toggled by an `IntersectionObserver` in `initReveal()`. There is no separate hero header — `#about` is the first section and doubles as the landing view (name, rotating role, and stats), so it's what's visible on load with no scrolling needed.
 - **`#scroll-progress`** — a top progress bar tracking overall page scroll (`initScrollProgress()`).
-- **Rotating role text** — `#about` shows "Michael Val Moratalla" / "a `<span class="hero-role">`" / a static bio line / the stats row. Any element with class `.hero-role` is kept in sync by `initHeroRoleRotation()`, which cycles through the `heroRoles` array in `js/app.js` every 4s.
+- **Rotating role text** — `#about` shows "Michael Val Moratalla" / "`<span class="hero-role">` who ships products people actually use." / the stats row (`.about-stats`, count-up animated by `initStatsCountUp()`). Any element with class `.hero-role` is kept in sync by `initHeroRoleRotation()`, which cycles through the `heroRoles` array in `js/app.js` every 6s. The first entry of `heroRoles` is the role shown on load, so keep the initial text of `#hero-role` in `index.html` identical to it.
 
 ### Project Data
 

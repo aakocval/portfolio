@@ -220,15 +220,11 @@ function initCopyrightVisibility() {
 }
 
 var heroRoles = [
-    'Senior iOS Developer',
     'Software Developer',
     'Coffee Lover',
     'Mobile App Builder',
-    'Swift Enthusiast',
     'Product-Minded Engineer',
-    'iOS Craftsman',
     'Bug Whisperer',
-    'Xcode Regular',
     'Full-Time Shipper',
     'Pixel Perfectionist',
     'Weekend Tinkerer',
