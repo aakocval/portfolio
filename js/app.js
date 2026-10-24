@@ -12,37 +12,6 @@ var projects = [
         downloads: '1M+'
     },
     {
-        name: 'Intro.u',
-        description: 'Real connections, matched by proximity and taste.',
-        responsibilities: 'Started the app from scratch and added new features.',
-        technology: 'SwiftUI, MVVM-C, Google Maps, In-app Purchase, Unit Testing',
-        link: 'https://apps.apple.com/ph/app/intro-u-real-connections/id6758976647',
-        screenshots: ['images/work/IntroU/1.jpg', 'images/work/IntroU/2.jpg', 'images/work/IntroU/3.jpg', 'images/work/IntroU/4.jpg', 'images/work/IntroU/5.jpg', 'images/work/IntroU/6.jpg'],
-        misc: 'one',
-        rating: { score: 5.0, count: 1 }
-    },
-    {
-        name: 'PnutGo',
-        description: 'Catch, collect, and explore the world around you.',
-        responsibilities: 'Maintained and added new features.',
-        technology: 'SwiftUI, MVVM-C, Google Maps, In-app Purchase, Unit Testing',
-        link: 'https://apps.apple.com/au/app/pnutgo-collect-cute-animals/id6755419201',
-        screenshots: ['images/work/PnutGo/1.jpg', 'images/work/PnutGo/2.jpg', 'images/work/PnutGo/3.jpg', 'images/work/PnutGo/4.jpg', 'images/work/PnutGo/5.jpg', 'images/work/PnutGo/6.jpg'],
-        misc: 'two',
-        rating: { score: 5.0, count: 1 }
-    },
-    {
-        name: 'CabinKeep',
-        description: 'One home, every task, in one place.',
-        responsibilities: 'Started the app from scratch and added new features.',
-        technology: 'SwiftUI, MVVM-C, In-app Purchase, Unit Testing',
-        link: 'https://apps.apple.com/au/app/cabinkeep-house-management/id6755082635',
-        icon: 'images/logos/CabinKeep.png',
-        screenshots: ['images/work/CabinKeep/1.jpg', 'images/work/CabinKeep/2.jpg', 'images/work/CabinKeep/3.jpg', 'images/work/CabinKeep/4.jpg'],
-        misc: 'three',
-        rating: { score: 5.0, count: 2 }
-    },
-    {
         name: 'Symptly',
         description: 'Track symptoms. Spot patterns. Feel better.',
         responsibilities: 'Maintained and added new features.',
@@ -62,17 +31,6 @@ var projects = [
         misc: 'five'
     },
     {
-        name: 'Pinch',
-        description: 'Real-time video editing, together.',
-        responsibilities: 'Started the app from scratch, maintained and added new features.',
-        technology: 'SwiftUI, MVVM-C, Codable, Storyboard, Alamofire, In-app Purchase',
-        link: 'https://apps.apple.com/au/app/pinch-share-edit/id6475806094',
-        icon: 'images/logos/Pinch.png',
-        screenshots: ['images/work/Pinch/1.jpg', 'images/work/Pinch/2.jpg', 'images/work/Pinch/3.jpg', 'images/work/Pinch/4.jpg', 'images/work/Pinch/5.jpg', 'images/work/Pinch/6.jpg'],
-        misc: 'six',
-        rating: { score: 5.0, count: 10 }
-    },
-    {
         name: 'TrackNav',
         description: 'Precision navigation for locomotive drivers.',
         responsibilities: 'Started the app from scratch and added new features.',
@@ -82,31 +40,44 @@ var projects = [
         misc: 'one'
     },
     {
-        name: 'Dyna',
-        description: 'Discover, save, and share real food experiences.',
-        responsibilities: 'Started the app from scratch and added new features.',
-        technology: 'SwiftUI, MVVM-C, Unit Testing',
-        link: 'https://apps.apple.com/au/app/dyna/id6740112615',
-        screenshots: ['images/work/Dyna/1.jpg', 'images/work/Dyna/2.jpg', 'images/work/Dyna/3.jpg', 'images/work/Dyna/4.jpg', 'images/work/Dyna/5.jpg', 'images/work/Dyna/6.jpg'],
-        misc: 'two',
-        rating: { score: 5.0, count: 10 }
-    },
-    {
         name: 'Phoenix Live',
         description: 'Precision tools for modern agriculture.',
         responsibilities: 'Maintain and add new features.',
         technology: 'Swift, MVVM, Alamofire, Realm, Fastlane, Mapbox, Localization, Unit Testing',
-        link: 'https://apps.apple.com/au/app/phoenix-live/id1503981683',
+        link: 'https://play.google.com/store/apps/details?id=com.appetiser.agdata&hl=en',
         icon: 'images/logos/Phoenix Live.png',
         screenshots: ['images/work/PhoenixLive/1.jpg', 'images/work/PhoenixLive/2.jpg', 'images/work/PhoenixLive/3.jpg', 'images/work/PhoenixLive/4.jpg', 'images/work/PhoenixLive/5.jpg', 'images/work/PhoenixLive/6.jpg'],
-        misc: 'four',
-        rating: { score: 4.3, count: 7 }
+        misc: 'four'
     },
     {
         name: 'Salt Diary',
         description: 'The data-driven fishing diary.',
         link: 'https://apps.apple.com/ph/app/salt-diary/id6780346074',
         screenshots: ['images/work/SaltDiary/1.jpg', 'images/work/SaltDiary/2.jpg', 'images/work/SaltDiary/3.jpg', 'images/work/SaltDiary/4.jpg', 'images/work/SaltDiary/5.jpg'],
+        misc: 'three'
+    },
+    {
+        name: 'Crown Asia',
+        description: 'Premium homes and condos, searchable online.',
+        link: 'https://www.crownasia.com.ph/',
+        screenshots: ['images/work/CrownAsia/1.jpg'],
+        wide: true,
+        misc: 'one'
+    },
+    {
+        name: 'Bizu',
+        description: 'Online ordering for a patisserie and cafe.',
+        link: 'https://bizu.ph/',
+        screenshots: ['images/work/Bizu/1.jpg'],
+        wide: true,
+        misc: 'two'
+    },
+    {
+        name: 'Thirty One Digital',
+        description: 'A digital solutions company for forward-thinking brands.',
+        link: 'https://thirtyonedigital.com/',
+        screenshots: ['images/work/ThirtyOneDigital/1.jpg'],
+        wide: true,
         misc: 'three'
     }
 ];
@@ -143,7 +114,7 @@ function renderProjects() {
         }
         var statsMarkup = stats ? '<span class="project-stats">' + stats + '</span>' : '';
         return (
-            '<li class="project-item stagger-item ' + project.misc + '">' +
+            '<li class="project-item stagger-item ' + project.misc + (project.wide ? ' project-item--wide' : '') + '">' +
             '<' + tag + linkAttrs + '>' +
             gallery +
             '<span class="project-name">' + project.name + '</span>' +
@@ -304,27 +275,26 @@ var panelCopy = {
         'Mobile and web, end to end.',
         'Software Developer, always shipping.',
         'Pixels on the outside, logic underneath.',
-        'From idea to App Store, and back again.',
+        'From idea to launch, and back again.',
         'Ten years in, still shipping on Fridays.',
         'One more feature, one more coffee.',
         'Quezon City, PH — open to the world.',
         'Ship it, measure it, improve it.',
         'A decade of turning specs into screens.',
         'Not just an app — a product.',
-        'Built for App Store and browser tabs alike.',
+        'Built for app stores and browser tabs alike.',
         'Small team energy, big shipping habit.',
         'Hello there, thanks for scrolling.',
         'Where design meets a bit of engineering.',
         'A portfolio, still very much in progress.',
         'Powered by curiosity and too much coffee.',
-        'Somewhere between Xcode and a text editor.',
+        'Somewhere between an IDE and a text editor.',
         'Getting to know the human behind the code.',
         'A decade of shipping mobile and web.',
         'Based in Quezon City, working worldwide.',
         'Clean design, real products.',
         'Coffee first, then code.',
         'Ten years, one craft, still curious.',
-        'Started on iOS, never really stopped.',
         'Ships fast, cares about the details.',
         'Products over projects.',
         'Still sweating the small stuff.',
@@ -339,58 +309,34 @@ var panelCopy = {
         'Believes good docs save future headaches.',
         'Somewhere between engineer and designer.'
     ],
-    skills: [
-        'A toolbox built over a decade.',
-        'Swift by day, curious by night.',
-        'Always learning the next stack.',
-        'Mobile native, web capable.',
-        'From Swift to SQL and everything between.',
-        'Ten years of tools, still adding more.',
-        'Comfortable in Xcode and the terminal.',
-        'MVVM by default, pragmatic when needed.',
-        'Ships apps, builds sites, tests everything.',
-        'Picks the right tool, not the trendy one.',
-        'Ten years deep, still filling gaps.',
-        'Fluent in Swift, dangerous in SQL.',
-        'One stack for mobile, another for the web.',
-        'Tools change, the fundamentals don\'t.',
-        'Tests things before they break in prod.',
-        'Comfortable shipping CI/CD pipelines too.',
-        'From Realm to PostgreSQL, whatever fits.',
-        'Docker on the side, Xcode most days.',
-        'Figma to code, without losing the details.',
-        'Clean architecture, pragmatic delivery.'
-    ],
     work: [
         'Selected work, shipped to production.',
-        'Apps used by real people.',
+        'Products used by real people.',
         'A few favorites from the archive.',
         'Built from scratch, maintained with care.',
         'A decade of features, big and small.',
-        'Telemedicine, farming, dating, and more.',
-        'Every card here started as a blank file.',
+        'Telemedicine, farming, fishing, real estate, and more.',
         'Shipped, iterated, shipped again.',
         'Some built solo, some built with teams.',
         'More on the way — this list keeps growing.',
         'From startups to solo passion projects.',
-        'Health, farming, dating, collecting — a bit of everything.',
-        'Real screenshots, straight from the App Store.',
-        'Ten apps, ten different problems solved.',
-        'Web projects joining this list soon.',
+        'Health, farming, fishing, real estate — a bit of everything.',
+        'Real screenshots, straight from production.',
+        'Different problems, one craft.',
+        'Apps and websites, side by side.',
         'Client work, side projects, a bit of both.',
         'Started from scratch more times than not.',
         'Maintained, refactored, and loved anyway.',
-        'Every box here is a real shipped product.',
-        'Swipe through each one for the real thing.'
+        'Every box here is a real shipped product.'
     ],
     contact: [
         "Let's build something together.",
         'Say hello, or pitch an idea.',
         'Open to the next opportunity.',
         'Always up for a coffee chat.',
-        "Let's talk about your next app.",
+        "Let's talk about your next project.",
         'Freelance, full-time, or just curious — reach out.',
-        'Replies faster than most App Store reviews.',
+        'Replies faster than most pull requests get reviewed.',
         'One email away from a first call.',
         'Got a rough idea? That\'s a good enough start.',
         'Based in PH, working with teams everywhere.',
@@ -456,46 +402,155 @@ function initProjectColorShuffle() {
     observer.observe(work);
 }
 
-function initStatsCountUp() {
-    var section = document.querySelector('.about-stats');
-    var stats = document.querySelectorAll('.about-stats strong');
-    if (!section || !stats.length || !('IntersectionObserver' in window)) return;
+function initDotField() {
+    var canvas = document.getElementById('dot-field');
+    if (!canvas || !canvas.getContext) return;
 
-    function formatCount(num) {
-        if (num >= 1000000) {
-            return (num % 1000000 === 0 ? num / 1000000 : (num / 1000000).toFixed(1)) + 'M';
-        }
-        if (num >= 1000) {
-            return (num % 1000 === 0 ? num / 1000 : (num / 1000).toFixed(1)) + 'K';
-        }
-        return String(Math.floor(num));
+    var ctx = canvas.getContext('2d');
+    var SPACING = 24;
+    var RADIUS = 2.4;
+    var REACH = 120;
+    var PUSH = 26;
+    var EASE = 0.16;
+    var LEVELS = 8;
+    var color = canvas.getAttribute('data-dot-color') || '#a3a3aa';
+    var dots = [];
+    var buckets = [];
+    var mouse = null;
+    var running = false;
+    var dim = 1;
+
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = color;
+        buckets.forEach(function (bucket, i) {
+            ctx.globalAlpha = ((i + 1) / LEVELS) * dim;
+            ctx.beginPath();
+            bucket.forEach(function (d) {
+                ctx.moveTo(d.x + RADIUS, d.y);
+                ctx.arc(d.x, d.y, RADIUS, 0, Math.PI * 2);
+            });
+            ctx.fill();
+        });
+        ctx.globalAlpha = 1;
     }
 
-    function animate(el) {
-        var match = el.textContent.trim().match(/^(\d+(?:\.\d+)?)(K|M)?(.*)$/i);
-        if (!match) return;
-        var multiplier = /m/i.test(match[2]) ? 1000000 : /k/i.test(match[2]) ? 1000 : 1;
-        var target = parseFloat(match[1]) * multiplier;
-        var suffix = match[3];
-        var duration = 1400;
-        var start = null;
-        function step(timestamp) {
-            if (!start) start = timestamp;
-            var linear = Math.min((timestamp - start) / duration, 1);
-            el.textContent = formatCount(linear * target) + suffix;
-            if (linear < 1) requestAnimationFrame(step);
+    function build() {
+        var rect = canvas.getBoundingClientRect();
+        var dpr = window.devicePixelRatio || 1;
+        var w = rect.width;
+        var h = rect.height;
+        canvas.width = Math.round(w * dpr);
+        canvas.height = Math.round(h * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+        var narrow = w < 700;
+        dim = narrow ? 0.5 : 1;
+        var top = -h * 0.12;
+        var height = h * 1.2;
+        var halfWidth = narrow ? w * 0.5 : w * 0.4;
+        var thick = narrow ? 140 : 290;
+        var cx = narrow ? w / 2 : w * 0.7;
+        dots = [];
+        buckets = [];
+        for (var i = 0; i < LEVELS; i++) buckets.push([]);
+
+        for (var y = SPACING / 2; y < h; y += SPACING) {
+            var t = (y - top) / height;
+            if (t < 0 || t > 1) continue;
+            var arm = halfWidth * (1 - t);
+            for (var x = SPACING / 2; x < w; x += SPACING) {
+                var dist = Math.min(Math.abs(x - (cx - arm)), Math.abs(x - (cx + arm)));
+                var inside = thick / 2 - dist;
+                if (inside <= 0) continue;
+                var fade = Math.min(1, inside / (SPACING * 1.5), (y - top) / 40);
+                if (fade <= 0) continue;
+                var d = { ox: x, oy: y, x: x, y: y };
+                dots.push(d);
+                buckets[Math.min(LEVELS, Math.ceil(fade * LEVELS)) - 1].push(d);
+            }
         }
+        draw();
+    }
+
+    function step() {
+        var moving = 0;
+        dots.forEach(function (d) {
+            var tx = d.ox;
+            var ty = d.oy;
+            if (mouse) {
+                var dx = d.ox - mouse.x;
+                var dy = d.oy - mouse.y;
+                var dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < REACH && dist > 0.001) {
+                    var f = 1 - dist / REACH;
+                    var push = f * f * PUSH;
+                    tx += (dx / dist) * push;
+                    ty += (dy / dist) * push;
+                }
+            }
+            d.x += (tx - d.x) * EASE;
+            d.y += (ty - d.y) * EASE;
+            moving = Math.max(moving, Math.abs(tx - d.x), Math.abs(ty - d.y));
+        });
+        draw();
+        if (moving > 0.05) requestAnimationFrame(step);
+        else running = false;
+    }
+
+    function kick() {
+        if (running) return;
+        running = true;
         requestAnimationFrame(step);
     }
 
-    var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-            if (!entry.isIntersecting) return;
-            stats.forEach(animate);
-            observer.unobserve(entry.target);
-        });
-    }, { threshold: 0.4 });
-    observer.observe(section);
+    build();
+
+    var lastWidth = window.innerWidth;
+    var resizeTimer = null;
+    window.addEventListener('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function () {
+            // Mobile browsers fire resize when the URL bar collapses; the canvas height is fixed (100vh), so skip those.
+            if (window.innerWidth === lastWidth && window.matchMedia('(hover: none)').matches) return;
+            lastWidth = window.innerWidth;
+            build();
+        }, 150);
+    });
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    window.addEventListener('mousemove', function (e) {
+        mouse = { x: e.clientX, y: e.clientY };
+        kick();
+    });
+    document.documentElement.addEventListener('mouseleave', function () {
+        mouse = null;
+        kick();
+    });
+}
+
+function initCursorRing() {
+    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+
+    var ring = document.createElement('div');
+    ring.className = 'cursor-ring';
+    ring.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(ring);
+
+    var shown = false;
+    window.addEventListener('mousemove', function (e) {
+        if (!shown) {
+            shown = true;
+            document.documentElement.classList.add('has-custom-cursor');
+        }
+        ring.style.transform = 'translate3d(' + e.clientX + 'px,' + e.clientY + 'px,0)';
+        ring.classList.add('is-visible');
+        ring.classList.toggle('is-active', !!(e.target.closest && e.target.closest('a, button, [role="button"], input, textarea, select, label')));
+    });
+    document.documentElement.addEventListener('mouseleave', function () {
+        ring.classList.remove('is-visible');
+    });
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -509,7 +564,8 @@ document.addEventListener('DOMContentLoaded', function () {
     initTopbarAutoHide();
     initLogoScrollRotate();
     initPanelText();
-    initStatsCountUp();
+    initDotField();
+    initCursorRing();
     initProjectColorShuffle();
     var yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();

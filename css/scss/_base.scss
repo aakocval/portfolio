@@ -17,6 +17,10 @@ html {
     font-size: 112.5%;
 }
 
+body {
+    background: transparent;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -181,6 +185,48 @@ h1, h2 {
     transition: opacity 0.3s ease;
 }
 
+.dot-field {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 65%;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    margin: -9px 0 0 -9px;
+    border: 1.5px solid #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    will-change: transform;
+    opacity: 0;
+    transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease, margin 0.2s ease;
+
+    &.is-visible {
+        opacity: 1;
+    }
+
+    &.is-active {
+        width: 32px;
+        height: 32px;
+        margin: -16px 0 0 -16px;
+    }
+}
+
+html.has-custom-cursor,
+html.has-custom-cursor * {
+    cursor: none !important;
+}
+
 .hero-links {
     position: fixed;
     top: 1.5rem;
@@ -224,36 +270,6 @@ h1, h2 {
     font-size: 1.35rem;
     line-height: 1.7;
     color: $lgray;
-}
-
-.about-stats {
-    display: flex;
-    flex-wrap: wrap;
-    width: fit-content;
-    max-width: 100%;
-    gap: 2rem;
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid $border;
-
-    li {
-        display: flex;
-        flex-direction: column;
-        gap: 0.15rem;
-    }
-
-    strong {
-        font-family: 'Fraunces', Georgia, serif;
-        font-size: 1.8rem;
-        font-weight: 600;
-        color: $black;
-        line-height: 1;
-    }
-
-    span {
-        font-size: 0.85rem;
-        color: $gray;
-    }
 }
 
 .social-links {
@@ -348,41 +364,6 @@ h1, h2 {
     line-height: 1.55;
 }
 
-.skill-group {
-    margin-bottom: 2rem;
-
-    &:last-child {
-        margin-bottom: 0;
-    }
-
-    h3 {
-        font-size: 0.95rem;
-        font-weight: 600;
-        color: $gray;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
-        margin-bottom: 0.9rem;
-    }
-}
-
-.skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-
-    li {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 0.5rem 1rem;
-        border: 1px solid $border;
-        border-radius: 999px;
-        font-size: 0.9rem;
-        color: $gray;
-        background: #fafafa;
-    }
-}
-
 .projects-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -420,6 +401,15 @@ h1, h2 {
     &.four a, &.four div { background: $colorFour; }
     &.five a, &.five div { background: $colorFive; }
     &.six a, &.six div { background: $colorSix; }
+}
+
+.project-item--wide {
+    grid-column: 1 / -1;
+
+    a,
+    div {
+        aspect-ratio: 2 / 1;
+    }
 }
 
 .project-gallery {

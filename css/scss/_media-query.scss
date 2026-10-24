@@ -3,6 +3,10 @@
         display: none;
     }
 
+    .dot-field {
+        width: 100%;
+    }
+
     .site-content {
         width: 100%;
         padding: 0 1.5rem;
@@ -58,6 +62,11 @@
     .projects-list {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .project-item--wide a,
+    .project-item--wide div {
+        aspect-ratio: 16 / 10;
+    }
 }
 
 @media (min-width: 700px) and (max-width: 900px) {
@@ -90,16 +99,6 @@
 
     .about-text {
         font-size: 1.05rem;
-    }
-
-    .about-stats {
-        gap: 1.5rem;
-        margin-top: 1.5rem;
-        padding-top: 1.25rem;
-
-        strong {
-            font-size: 1.5rem;
-        }
     }
 
     .contact-statement {
