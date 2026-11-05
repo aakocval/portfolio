@@ -12,6 +12,37 @@ var projects = [
         downloads: '1M+'
     },
     {
+        name: 'Intro.u',
+        description: 'Real connections, matched by proximity and taste.',
+        responsibilities: 'Started the app from scratch and added new features.',
+        technology: 'SwiftUI, MVVM-C, Google Maps, In-app Purchase, Unit Testing',
+        link: 'https://apps.apple.com/ph/app/intro-u-real-connections/id6758976647',
+        screenshots: ['images/work/IntroU/1.jpg', 'images/work/IntroU/2.jpg', 'images/work/IntroU/3.jpg', 'images/work/IntroU/4.jpg', 'images/work/IntroU/5.jpg', 'images/work/IntroU/6.jpg'],
+        misc: 'one',
+        rating: { score: 5.0, count: 1 }
+    },
+    {
+        name: 'PnutGo',
+        description: 'Catch, collect, and explore the world around you.',
+        responsibilities: 'Maintained and added new features.',
+        technology: 'SwiftUI, MVVM-C, Google Maps, In-app Purchase, Unit Testing',
+        link: 'https://apps.apple.com/au/app/pnutgo-collect-cute-animals/id6755419201',
+        screenshots: ['images/work/PnutGo/1.jpg', 'images/work/PnutGo/2.jpg', 'images/work/PnutGo/3.jpg', 'images/work/PnutGo/4.jpg', 'images/work/PnutGo/5.jpg', 'images/work/PnutGo/6.jpg'],
+        misc: 'two',
+        rating: { score: 5.0, count: 1 }
+    },
+    {
+        name: 'CabinKeep',
+        description: 'One home, every task, in one place.',
+        responsibilities: 'Started the app from scratch and added new features.',
+        technology: 'SwiftUI, MVVM-C, In-app Purchase, Unit Testing',
+        link: 'https://apps.apple.com/au/app/cabinkeep-house-management/id6755082635',
+        icon: 'images/logos/CabinKeep.png',
+        screenshots: ['images/work/CabinKeep/1.jpg', 'images/work/CabinKeep/2.jpg', 'images/work/CabinKeep/3.jpg', 'images/work/CabinKeep/4.jpg'],
+        misc: 'three',
+        rating: { score: 5.0, count: 2 }
+    },
+    {
         name: 'Symptly',
         description: 'Track symptoms. Spot patterns. Feel better.',
         responsibilities: 'Maintained and added new features.',
@@ -31,6 +62,17 @@ var projects = [
         misc: 'five'
     },
     {
+        name: 'Pinch',
+        description: 'Real-time video editing, together.',
+        responsibilities: 'Started the app from scratch, maintained and added new features.',
+        technology: 'SwiftUI, MVVM-C, Codable, Storyboard, Alamofire, In-app Purchase',
+        link: 'https://apps.apple.com/au/app/pinch-share-edit/id6475806094',
+        icon: 'images/logos/Pinch.png',
+        screenshots: ['images/work/Pinch/1.jpg', 'images/work/Pinch/2.jpg', 'images/work/Pinch/3.jpg', 'images/work/Pinch/4.jpg', 'images/work/Pinch/5.jpg', 'images/work/Pinch/6.jpg'],
+        misc: 'six',
+        rating: { score: 5.0, count: 10 }
+    },
+    {
         name: 'TrackNav',
         description: 'Precision navigation for locomotive drivers.',
         responsibilities: 'Started the app from scratch and added new features.',
@@ -38,6 +80,16 @@ var projects = [
         link: 'https://apps.apple.com/au/app/tracknav/id6791431103',
         screenshots: ['images/work/TrackNav/1.jpg', 'images/work/TrackNav/2.jpg', 'images/work/TrackNav/3.jpg', 'images/work/TrackNav/4.jpg'],
         misc: 'one'
+    },
+    {
+        name: 'Dyna',
+        description: 'Discover, save, and share real food experiences.',
+        responsibilities: 'Started the app from scratch and added new features.',
+        technology: 'SwiftUI, MVVM-C, Unit Testing',
+        link: 'https://apps.apple.com/au/app/dyna/id6740112615',
+        screenshots: ['images/work/Dyna/1.jpg', 'images/work/Dyna/2.jpg', 'images/work/Dyna/3.jpg', 'images/work/Dyna/4.jpg', 'images/work/Dyna/5.jpg', 'images/work/Dyna/6.jpg'],
+        misc: 'two',
+        rating: { score: 5.0, count: 10 }
     },
     {
         name: 'Phoenix Live',
@@ -57,6 +109,14 @@ var projects = [
         misc: 'three'
     },
     {
+        name: 'Olie',
+        description: 'Turn any roster into calendar events.',
+        link: 'https://apps.apple.com/ph/app/olie-roster-calendar/id6751304025',
+        screenshots: ['images/work/Olie/1.jpg', 'images/work/Olie/2.jpg', 'images/work/Olie/3.jpg', 'images/work/Olie/4.jpg', 'images/work/Olie/5.jpg'],
+        misc: 'five',
+        rating: { score: 5.0, count: 2 }
+    },
+    {
         name: 'Crown Asia',
         description: 'Premium homes and condos, searchable online.',
         link: 'https://www.crownasia.com.ph/',
@@ -71,14 +131,6 @@ var projects = [
         screenshots: ['images/work/Bizu/1.jpg'],
         wide: true,
         misc: 'two'
-    },
-    {
-        name: 'Thirty One Digital',
-        description: 'A digital solutions company for forward-thinking brands.',
-        link: 'https://thirtyonedigital.com/',
-        screenshots: ['images/work/ThirtyOneDigital/1.jpg'],
-        wide: true,
-        misc: 'three'
     }
 ];
 
