@@ -96,10 +96,11 @@ var projects = [
         description: 'Precision tools for modern agriculture.',
         responsibilities: 'Maintain and add new features.',
         technology: 'Swift, MVVM, Alamofire, Realm, Fastlane, Mapbox, Localization, Unit Testing',
-        link: 'https://play.google.com/store/apps/details?id=com.appetiser.agdata&hl=en',
+        link: 'https://apps.apple.com/au/app/phoenix-live/id1503981683',
         icon: 'images/logos/Phoenix Live.png',
         screenshots: ['images/work/PhoenixLive/1.jpg', 'images/work/PhoenixLive/2.jpg', 'images/work/PhoenixLive/3.jpg', 'images/work/PhoenixLive/4.jpg', 'images/work/PhoenixLive/5.jpg', 'images/work/PhoenixLive/6.jpg'],
-        misc: 'four'
+        misc: 'four',
+        rating: { score: 4.3, count: 7 }
     },
     {
         name: 'Salt Diary',
