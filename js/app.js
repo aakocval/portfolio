@@ -244,7 +244,7 @@ function initCopyrightVisibility() {
 }
 
 var heroRoles = [
-    'Software Developer',
+    'Software Engineer',
     'Coffee Lover',
     'Mobile App Builder',
     'Product-Minded Engineer',
@@ -326,7 +326,7 @@ var panelCopy = {
         'Turning ideas into products.',
         'Code, coffee, repeat.',
         'Mobile and web, end to end.',
-        'Software Developer, always shipping.',
+        'Software Engineer, always shipping.',
         'Pixels on the outside, logic underneath.',
         'From idea to launch, and back again.',
         'Ten years in, still shipping on Fridays.',

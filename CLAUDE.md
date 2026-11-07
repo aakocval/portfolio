@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-A single-page personal portfolio website for Val Moratalla (Software Developer). It is a static site with no build pipeline or package manager beyond a `composer.json` shell. The site is hosted on GitHub Pages at `https://aakocval.github.io/portfolio/`.
+A single-page personal portfolio website for Val Moratalla (Software Engineer). It is a static site with no build pipeline or package manager beyond a `composer.json` shell. The site is hosted on GitHub Pages at `https://aakocval.github.io/portfolio/`.
 
 ## Development
 
