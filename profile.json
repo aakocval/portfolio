@@ -4,7 +4,7 @@
   "name": "Val Moratalla",
   "headline": "Software Engineer",
   "location": "Quezon City, PH",
-  "bio": "Software Engineer based in Quezon City, PH, with about a decade of experience shipping products people actually use, mostly mobile apps.",
+  "bio": "Software Engineer based in Quezon City, PH, with over a decade of experience (since 2015) building iOS, mobile and web products people actually use. Currently building production-grade apps independently.",
   "availability": "Open to opportunities",
   "contact": {
     "email": "aakocval@gmail.com",
@@ -24,18 +24,51 @@
     ]
   },
   "skills": {
-    "summary": "Mostly native iOS: Swift and SwiftUI with MVVM / MVVM-C, plus Alamofire, Codable, in-app purchases and unit testing. Also Android, React Native, and React for web.",
+    "summary": "Mostly native iOS: Swift and SwiftUI (plus UIKit) with MVVM / MVVM-C and Clean Architecture, REST and GraphQL APIs, Firebase, in-app purchases and thorough unit testing (XCTest, Swift Testing). Also React Native, React, TypeScript and Python.",
     "items": [
       "iOS",
+      "iPadOS",
+      "watchOS",
       "Swift",
       "SwiftUI",
+      "UIKit",
+      "React Native",
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "PHP",
+      "SQL",
+      "Python",
+      "HTML5",
+      "CSS3",
+      "WordPress",
       "MVVM",
       "MVVM-C",
+      "MVC",
+      "Clean Architecture",
+      "Modular Architecture",
+      "Firebase",
+      "Supabase",
+      "REST APIs",
+      "GraphQL",
+      "AWS",
       "Alamofire",
       "Codable",
-      "Android",
-      "React Native",
-      "React"
+      "Realm",
+      "Firestore",
+      "MySQL",
+      "PostgreSQL",
+      "MongoDB",
+      "CI/CD",
+      "GitHub Actions",
+      "Bitrise",
+      "Fastlane",
+      "Xcode",
+      "Git",
+      "XCTest",
+      "Swift Testing",
+      "Quick/Nimble",
+      "Detox"
     ]
   },
   "projects": [
@@ -237,6 +270,50 @@
         "openai",
         "ai",
         "learning"
+      ]
+    },
+    {
+      "q": "Where has Val worked?",
+      "a": "Val has worked since 2015:\nSoftware Engineer, self-employed (Aug 2026 - present): building production web and iOS apps and shipping MVPs within months.\nLead Mobile Application Developer, Yoonet (Nov 2020 - Aug 2026): architected native iOS apps in Swift with REST, GraphQL, Firebase and Mapbox, with 85%+ test coverage.\nMid iOS Developer, Pixsell Creatives (Jul - Oct 2020).\nWeb/iOS Developer, Thirty One Digital (Jul 2016 - Jul 2020).\nWeb Developer, Alfafusion (May 2015 - May 2016).",
+      "keywords": [
+        "employer",
+        "employers",
+        "employment",
+        "worked",
+        "companies",
+        "company",
+        "career",
+        "work history",
+        "yoonet",
+        "where do you work",
+        "where does val work"
+      ]
+    },
+    {
+      "q": "What is Val working on now?",
+      "a": "Since August 2026 Val has been working independently as a Software Engineer, building production-grade web and iOS apps from architecture through deployment and shipping MVPs within months, using AI-assisted tools across planning, UI, testing and deployment.",
+      "keywords": [
+        "currently",
+        "right now",
+        "these days",
+        "self employed",
+        "freelance",
+        "current job",
+        "present"
+      ]
+    },
+    {
+      "q": "What is Val's education?",
+      "a": "Bachelor of Science in Information Technology from Informatics College - Eastwood (April 2015). Val was an Academic Excellence Awardee.",
+      "keywords": [
+        "education",
+        "degree",
+        "school",
+        "college",
+        "university",
+        "graduate",
+        "studied",
+        "diploma"
       ]
     }
   ],

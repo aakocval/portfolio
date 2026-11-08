@@ -15,8 +15,8 @@
         })
         .then(function (profile) {
             FolioBot.init(FolioBot.fromProfile(profile, {
-                // Sits above the "© aakocval" line in the dark side panel.
-                position: { right: 24, bottom: 56 }
+                // Bottom-right corner of the dark side panel.
+                position: { right: 24, bottom: 24 }
             }));
         })
         .catch(function (err) {

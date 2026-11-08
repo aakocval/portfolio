@@ -229,22 +229,6 @@ function initNavHighlight() {
     sections.forEach(function (el) { observer.observe(el); });
 }
 
-function initCopyrightVisibility() {
-    var copyright = document.querySelector('.site-copyright');
-    var contact = document.getElementById('contact');
-    if (!copyright || !contact) return;
-    if (!('IntersectionObserver' in window)) {
-        copyright.classList.add('is-visible');
-        return;
-    }
-    var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-            copyright.classList.toggle('is-visible', entry.isIntersecting);
-        });
-    }, { rootMargin: '-45% 0px -45% 0px' });
-    observer.observe(contact);
-}
-
 var heroRoles = [
     'Software Engineer',
     'Coffee Lover',
@@ -616,7 +600,6 @@ document.addEventListener('DOMContentLoaded', function () {
     initReveal();
     initScrollProgress();
     initNavHighlight();
-    initCopyrightVisibility();
     initHeroRoleRotation();
     initLogoRefresh();
     initTopbarAutoHide();
