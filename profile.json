@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/aakocval/foliobot/2bdc5f1cc3381790d97420b1e9daa919801da1c5/schema/profile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/aakocval/foliobot/36ca9e2c95679188f3a170a6ec12a9a63dcfedbc/schema/profile.schema.json",
   "schemaVersion": 1,
   "name": "Val Moratalla",
   "headline": "Software Engineer",

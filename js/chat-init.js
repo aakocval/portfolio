@@ -15,7 +15,9 @@
         })
         .then(function (profile) {
             FolioBot.init(FolioBot.fromProfile(profile, {
-                // Bottom-right corner of the dark side panel.
+                // Bottom-right corner of the dark side panel. 'auto' follows the
+                // visitor's light/dark system setting.
+                theme: 'auto',
                 position: { right: 24, bottom: 24 }
             }));
         })
