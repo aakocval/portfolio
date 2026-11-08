@@ -42,6 +42,12 @@ The page is a single vertically-scrolling document, not a set of sliding panels.
 - **Cursor ring** — `initCursorRing()` hides the native cursor on fine-pointer devices and shows a transparent ring with a white border (`mix-blend-mode: difference`, so it inverts over white areas); it grows over links and buttons.
 - **Rotating role text** — `#about` shows "Val Moratalla" / "`<span class="hero-role">` who ships products people actually use.". Any element with class `.hero-role` is kept in sync by `initHeroRoleRotation()`, which cycles through the `heroRoles` array in `js/app.js` every 6s. The first entry of `heroRoles` is the role shown on load, so keep the initial text of `#hero-role` in `index.html` identical to it.
 
+### Chat Widget (FolioBot)
+
+The chat widget is **not in this repo**: it is the separate open-source project [aakocval/foliobot](https://github.com/aakocval/foliobot) (Shadow DOM widget mounted as `#foliobot`, fixed, z-index 200 so the cursor ring at 9999 stays on top). `index.html` loads `widget/foliobot.js` and `widget/profile-engine.js` from jsDelivr, **pinned to an exact commit SHA with `integrity` hashes**, so foliobot changes can never alter this site until the pin is bumped deliberately. To upgrade: push to foliobot, take the new commit SHA, change it in both script URLs and in the `$schema` URL in `profile.json`, and regenerate each hash with `openssl dgst -sha384 -binary <file> | openssl base64 -A` (prefix `sha384-`). Verify the CDN serves the file first (`curl` the URL and `cmp` against the local file).
+
+Everything the bot knows lives in `profile.json` (repo root; shape defined by foliobot's `schema/profile.schema.json`). `js/chat-init.js` fetches it and mounts the widget; if the CDN or the profile fails to load, the chat silently doesn't appear. **`profile.json` duplicates the project facts in `js/app.js`'s `projects` array** (it was generated from it); when you add or change a project, update both. The widget reads `--fb-cursor` so it follows the custom-cursor rule in `_base.scss`; `initCursorRing()` uses `composedPath()` so the ring still grows over widget buttons. Currently scripted (no AI, no network); the owner is building a Python backend in the foliobot repo as a learning project, so don't implement the AI steps unasked.
+
 ### Project Data
 
 There is no Angular/jQuery layer. `js/app.js` defines a plain `projects` array at module scope — the source of truth for all project data — and `renderProjects()` renders it into `#projects-list` on `DOMContentLoaded`.

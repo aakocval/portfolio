@@ -599,7 +599,10 @@ function initCursorRing() {
         }
         ring.style.transform = 'translate3d(' + e.clientX + 'px,' + e.clientY + 'px,0)';
         ring.classList.add('is-visible');
-        ring.classList.toggle('is-active', !!(e.target.closest && e.target.closest('a, button, [role="button"], input, textarea, select, label')));
+        // composedPath()[0] is the real element even inside an open shadow root (e.g. the chat widget);
+        // e.target would just be the shadow host there.
+        var target = e.composedPath ? e.composedPath()[0] : e.target;
+        ring.classList.toggle('is-active', !!(target && target.closest && target.closest('a, button, [role="button"], input, textarea, select, label')));
     });
     document.documentElement.addEventListener('mouseleave', function () {
         ring.classList.remove('is-visible');

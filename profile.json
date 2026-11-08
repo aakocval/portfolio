@@ -1,0 +1,259 @@
+{
+  "$schema": "https://raw.githubusercontent.com/aakocval/foliobot/3e5ecba9ce0a149cedc9886c2de83dd6360bdca0/schema/profile.schema.json",
+  "schemaVersion": 1,
+  "name": "Val Moratalla",
+  "headline": "Software Engineer",
+  "location": "Quezon City, PH",
+  "bio": "Software Engineer based in Quezon City, PH, with about a decade of experience shipping products people actually use, mostly mobile apps.",
+  "availability": "Open to opportunities",
+  "contact": {
+    "email": "aakocval@gmail.com",
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/valmoratalla/"
+      },
+      {
+        "label": "Facebook",
+        "url": "https://www.facebook.com/val.moratalla"
+      },
+      {
+        "label": "Instagram",
+        "url": "https://www.instagram.com/aakocval/"
+      }
+    ]
+  },
+  "skills": {
+    "summary": "Mostly native iOS: Swift and SwiftUI with MVVM / MVVM-C, plus Alamofire, Codable, in-app purchases and unit testing. Also Android, React Native, and React for web.",
+    "items": [
+      "iOS",
+      "Swift",
+      "SwiftUI",
+      "MVVM",
+      "MVVM-C",
+      "Alamofire",
+      "Codable",
+      "Android",
+      "React Native",
+      "React"
+    ]
+  },
+  "projects": [
+    {
+      "name": "mWell",
+      "type": "app",
+      "description": "24/7 doctor consults, reimagined for mobile.",
+      "role": "Maintained and added new features.",
+      "stack": [
+        "Swift",
+        "SwiftUI",
+        "MVVM",
+        "Codable",
+        "Storyboard",
+        "Alamofire"
+      ],
+      "stats": [
+        "1M+ downloads",
+        "★ 4.6 (779 ratings)"
+      ],
+      "link": "https://apps.apple.com/ph/app/mwell-ph-24-7-doctor-consult/id1540729485"
+    },
+    {
+      "name": "Pinch",
+      "type": "app",
+      "description": "Real-time video editing, together.",
+      "role": "Started the app from scratch, maintained and added new features.",
+      "stack": [
+        "SwiftUI",
+        "MVVM-C",
+        "Codable",
+        "Storyboard",
+        "Alamofire",
+        "In-app Purchase"
+      ],
+      "stats": [
+        "★ 5.0 (10 ratings)"
+      ],
+      "link": "https://apps.apple.com/au/app/pinch-share-edit/id6475806094"
+    },
+    {
+      "name": "Dyna",
+      "type": "app",
+      "description": "Discover, save, and share real food experiences.",
+      "role": "Started the app from scratch and added new features.",
+      "stack": [
+        "SwiftUI",
+        "MVVM-C",
+        "Unit Testing"
+      ],
+      "stats": [
+        "★ 5.0 (10 ratings)"
+      ],
+      "link": "https://apps.apple.com/au/app/dyna/id6740112615"
+    },
+    {
+      "name": "Symptly",
+      "type": "app",
+      "description": "Track symptoms. Spot patterns. Feel better.",
+      "role": "Maintained and added new features.",
+      "stack": [
+        "SwiftUI",
+        "MVVM",
+        "Codable",
+        "In-app Purchase"
+      ],
+      "stats": [
+        "★ 4.9 (7 ratings)"
+      ],
+      "link": "https://apps.apple.com/au/app/symptly/id6751874212"
+    },
+    {
+      "name": "Phoenix Live",
+      "type": "app",
+      "description": "Precision tools for modern agriculture.",
+      "role": "Maintain and add new features.",
+      "stack": [
+        "Swift",
+        "MVVM",
+        "Alamofire",
+        "Realm",
+        "Fastlane",
+        "Mapbox",
+        "Localization",
+        "Unit Testing"
+      ],
+      "stats": [
+        "★ 4.3 (7 ratings)"
+      ],
+      "link": "https://apps.apple.com/au/app/phoenix-live/id1503981683"
+    },
+    {
+      "name": "CabinKeep",
+      "type": "app",
+      "description": "One home, every task, in one place.",
+      "role": "Started the app from scratch and added new features.",
+      "stack": [
+        "SwiftUI",
+        "MVVM-C",
+        "In-app Purchase",
+        "Unit Testing"
+      ],
+      "stats": [
+        "★ 5.0 (2 ratings)"
+      ],
+      "link": "https://apps.apple.com/au/app/cabinkeep-house-management/id6755082635"
+    },
+    {
+      "name": "Olie",
+      "type": "app",
+      "description": "Turn any roster into calendar events.",
+      "stats": [
+        "★ 5.0 (2 ratings)"
+      ],
+      "link": "https://apps.apple.com/ph/app/olie-roster-calendar/id6751304025"
+    },
+    {
+      "name": "Intro.u",
+      "type": "app",
+      "description": "Real connections, matched by proximity and taste.",
+      "role": "Started the app from scratch and added new features.",
+      "stack": [
+        "SwiftUI",
+        "MVVM-C",
+        "Google Maps",
+        "In-app Purchase",
+        "Unit Testing"
+      ],
+      "stats": [
+        "★ 5.0 (1 rating)"
+      ],
+      "link": "https://apps.apple.com/ph/app/intro-u-real-connections/id6758976647"
+    },
+    {
+      "name": "PnutGo",
+      "type": "app",
+      "description": "Catch, collect, and explore the world around you.",
+      "role": "Maintained and added new features.",
+      "stack": [
+        "SwiftUI",
+        "MVVM-C",
+        "Google Maps",
+        "In-app Purchase",
+        "Unit Testing"
+      ],
+      "stats": [
+        "★ 5.0 (1 rating)"
+      ],
+      "link": "https://apps.apple.com/au/app/pnutgo-collect-cute-animals/id6755419201"
+    },
+    {
+      "name": "Zero2Seventeen",
+      "type": "app",
+      "description": "A marketplace for outgrown kids' gear.",
+      "role": "Started the app from scratch, maintained and added new features.",
+      "stack": [
+        "Swift",
+        "MVVM-C",
+        "Storyboard",
+        "Alamofire",
+        "Unit Testing"
+      ],
+      "link": "https://apps.apple.com/us/app/zero2seventeen/id6739604370"
+    },
+    {
+      "name": "TrackNav",
+      "type": "app",
+      "description": "Precision navigation for locomotive drivers.",
+      "role": "Started the app from scratch and added new features.",
+      "stack": [
+        "SwiftUI",
+        "MVVM-C",
+        "Maps",
+        "Unit Testing"
+      ],
+      "link": "https://apps.apple.com/au/app/tracknav/id6791431103"
+    },
+    {
+      "name": "Salt Diary",
+      "type": "app",
+      "description": "The data-driven fishing diary.",
+      "link": "https://apps.apple.com/ph/app/salt-diary/id6780346074"
+    },
+    {
+      "name": "Crown Asia",
+      "type": "website",
+      "description": "Premium homes and condos, searchable online.",
+      "link": "https://www.crownasia.com.ph/"
+    },
+    {
+      "name": "Bizu",
+      "type": "website",
+      "description": "Online ordering for a patisserie and cafe.",
+      "link": "https://bizu.ph/"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Why does this chatbot exist?",
+      "a": "This chatbot is a learning project. Val is studying AI/ML engineering and cloud, and built this widget as a real project to practice on. Right now it answers from a scripted knowledge base; an AI backend is the next step.",
+      "keywords": [
+        "chatbot",
+        "bot",
+        "llm",
+        "openai",
+        "ai",
+        "learning"
+      ]
+    }
+  ],
+  "bot": {
+    "title": "Ask about Val",
+    "greeting": "Hi! I'm a small assistant for this portfolio. Ask me about Val's apps, tech stack, or how to get in touch.",
+    "suggestions": [
+      "What apps has Val shipped?",
+      "What's Val's tech stack?",
+      "How can I contact Val?",
+      "Why does this chatbot exist?"
+    ]
+  }
+}

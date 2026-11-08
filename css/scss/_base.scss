@@ -227,6 +227,12 @@ html.has-custom-cursor * {
     cursor: none !important;
 }
 
+// The chat widget lives in a shadow root, which `*` above cannot reach. The widget
+// reads --fb-cursor (custom properties cross the shadow boundary) instead of hard-coding pointer/text.
+html.has-custom-cursor #foliobot {
+    --fb-cursor: none;
+}
+
 .hero-links {
     position: fixed;
     top: 1.5rem;
