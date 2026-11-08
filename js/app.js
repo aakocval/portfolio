@@ -118,14 +118,6 @@ var projects = [
         rating: { score: 5.0, count: 2 }
     },
     {
-        name: 'Crown Asia',
-        description: 'Premium homes and condos, searchable online.',
-        link: 'https://www.crownasia.com.ph/',
-        screenshots: ['images/work/CrownAsia/1.jpg'],
-        wide: true,
-        misc: 'one'
-    },
-    {
         name: 'Bizu',
         description: 'Online ordering for a patisserie and cafe.',
         link: 'https://bizu.ph/',
@@ -134,6 +126,16 @@ var projects = [
         misc: 'two'
     }
 ];
+
+function esc(value) {
+    return String(value).replace(/[&<>"']/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+}
+
+function safeUrl(url) {
+    return /^https?:\/\//i.test(url) ? url : '#';
+}
 
 function renderProjects() {
     var list = document.getElementById('projects-list');
@@ -148,18 +150,18 @@ function renderProjects() {
     });
     list.innerHTML = sorted.map(function (project) {
         var tag = project.link ? 'a' : 'div';
-        var linkAttrs = project.link ? ' href="' + project.link + '" target="_blank" rel="noopener"' : '';
+        var linkAttrs = project.link ? ' href="' + esc(safeUrl(project.link)) + '" target="_blank" rel="noopener"' : '';
         var gallery = '';
         if (project.screenshots && project.screenshots.length) {
             var shotClass = 'project-shot' + (project.landscape ? ' project-shot--landscape' : '');
             var shots = project.screenshots.map(function (src, i) {
-                return '<img class="' + shotClass + '" src="' + src + '" alt="' + project.name + ' screenshot ' + (i + 1) + '" loading="lazy">';
+                return '<img class="' + shotClass + '" src="' + esc(src) + '" alt="' + esc(project.name) + ' screenshot ' + (i + 1) + '" loading="lazy">';
             }).join('');
             gallery = '<span class="project-gallery">' + shots + '</span><span class="project-shade"></span>';
         }
         var stats = '';
         if (project.downloads) {
-            stats += '<span class="project-stat">' + project.downloads + ' downloads</span>';
+            stats += '<span class="project-stat">' + esc(project.downloads) + ' downloads</span>';
         }
         if (project.rating) {
             var ratingLabel = project.rating.count === 1 ? 'rating' : 'ratings';
@@ -167,11 +169,11 @@ function renderProjects() {
         }
         var statsMarkup = stats ? '<span class="project-stats">' + stats + '</span>' : '';
         return (
-            '<li class="project-item stagger-item ' + project.misc + (project.wide ? ' project-item--wide' : '') + '">' +
+            '<li class="project-item stagger-item ' + esc(project.misc) + (project.wide ? ' project-item--wide' : '') + '">' +
             '<' + tag + linkAttrs + '>' +
             gallery +
-            '<span class="project-name">' + project.name + '</span>' +
-            '<span class="project-desc">' + project.description + '</span>' +
+            '<span class="project-name">' + esc(project.name) + '</span>' +
+            '<span class="project-desc">' + esc(project.description) + '</span>' +
             statsMarkup +
             '</' + tag + '>' +
             '</li>'
