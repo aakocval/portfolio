@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/aakocval/foliobot/3e5ecba9ce0a149cedc9886c2de83dd6360bdca0/schema/profile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/aakocval/foliobot/2bdc5f1cc3381790d97420b1e9daa919801da1c5/schema/profile.schema.json",
   "schemaVersion": 1,
   "name": "Val Moratalla",
   "headline": "Software Engineer",
@@ -248,12 +248,10 @@
   ],
   "bot": {
     "title": "Ask about Val",
-    "greeting": "Hi! I'm a small assistant for this portfolio. Ask me about Val's apps, tech stack, or how to get in touch.",
     "suggestions": [
       "What apps has Val shipped?",
       "What's Val's tech stack?",
-      "How can I contact Val?",
-      "Why does this chatbot exist?"
+      "How can I contact Val?"
     ]
   }
 }
