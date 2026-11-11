@@ -124,6 +124,14 @@ var projects = [
         screenshots: ['images/work/Bizu/1.jpg'],
         wide: true,
         misc: 'two'
+    },
+    {
+        name: 'Virelto Tools',
+        description: 'Free PDF tools that run entirely in your browser.',
+        link: 'https://virelto.vercel.app/',
+        screenshots: ['images/work/Virelto/1.jpg'],
+        wide: true,
+        misc: 'three'
     }
 ];
 

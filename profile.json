@@ -257,6 +257,12 @@
       "type": "website",
       "description": "Online ordering for a patisserie and cafe.",
       "link": "https://bizu.ph/"
+    },
+    {
+      "name": "Virelto Tools",
+      "type": "website",
+      "description": "Free PDF tools that run entirely in your browser.",
+      "link": "https://virelto.vercel.app/"
     }
   ],
   "faqs": [
