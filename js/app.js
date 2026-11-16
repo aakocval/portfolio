@@ -118,12 +118,12 @@ var projects = [
         rating: { score: 5.0, count: 2 }
     },
     {
-        name: 'Bizu',
-        description: 'Online ordering for a patisserie and cafe.',
-        link: 'https://bizu.ph/',
-        screenshots: ['images/work/Bizu/1.jpg'],
+        name: 'Clackey',
+        description: 'Mechanical keyboard sounds for your MacBook.',
+        link: 'https://aakocval.github.io/clackey/',
+        screenshots: ['images/work/Clackey/1.jpg'],
         wide: true,
-        misc: 'two'
+        misc: 'five'
     },
     {
         name: 'Virelto Tools',
@@ -132,6 +132,14 @@ var projects = [
         screenshots: ['images/work/Virelto/1.jpg'],
         wide: true,
         misc: 'three'
+    },
+    {
+        name: 'Bizu',
+        description: 'Online ordering for a patisserie and cafe.',
+        link: 'https://bizu.ph/',
+        screenshots: ['images/work/Bizu/1.jpg'],
+        wide: true,
+        misc: 'two'
     }
 ];
 
@@ -143,6 +151,23 @@ function esc(value) {
 
 function safeUrl(url) {
     return /^https?:\/\//i.test(url) ? url : '#';
+}
+
+// Cards render in the `is-loading` state: a shimmering skeleton (see _base.scss) instead of a colour.
+// It clears when the card's first screenshot has loaded. If that image fails, the card gets
+// `is-fallback` and shows its accent colour, so a broken image never leaves a card shimmering forever.
+function watchProjectImages(list) {
+    list.querySelectorAll('.project-item.is-loading').forEach(function (item) {
+        var img = item.querySelector('.project-shot');
+        function settle(ok) {
+            item.classList.remove('is-loading');
+            if (!ok) item.classList.add('is-fallback');
+        }
+        if (!img) return settle(false);
+        if (img.complete) return settle(img.naturalWidth > 0);
+        img.addEventListener('load', function () { settle(true); }, { once: true });
+        img.addEventListener('error', function () { settle(false); }, { once: true });
+    });
 }
 
 function renderProjects() {
@@ -177,7 +202,7 @@ function renderProjects() {
         }
         var statsMarkup = stats ? '<span class="project-stats">' + stats + '</span>' : '';
         return (
-            '<li class="project-item stagger-item ' + esc(project.misc) + (project.wide ? ' project-item--wide' : '') + '">' +
+            '<li class="project-item stagger-item ' + esc(project.misc) + (project.wide ? ' project-item--wide' : '') + (gallery ? ' is-loading' : ' is-fallback') + '">' +
             '<' + tag + linkAttrs + '>' +
             gallery +
             '<span class="project-name">' + esc(project.name) + '</span>' +
@@ -187,6 +212,7 @@ function renderProjects() {
             '</li>'
         );
     }).join('');
+    watchProjectImages(list);
 }
 
 function initReveal() {

@@ -253,16 +253,22 @@
       "link": "https://apps.apple.com/ph/app/salt-diary/id6780346074"
     },
     {
-      "name": "Bizu",
+      "name": "Clackey",
       "type": "website",
-      "description": "Online ordering for a patisserie and cafe.",
-      "link": "https://bizu.ph/"
+      "description": "Mechanical keyboard sounds for your MacBook.",
+      "link": "https://aakocval.github.io/clackey/"
     },
     {
       "name": "Virelto Tools",
       "type": "website",
       "description": "Free PDF tools that run entirely in your browser.",
       "link": "https://virelto.vercel.app/"
+    },
+    {
+      "name": "Bizu",
+      "type": "website",
+      "description": "Online ordering for a patisserie and cafe.",
+      "link": "https://bizu.ph/"
     }
   ],
   "faqs": [

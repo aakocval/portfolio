@@ -396,6 +396,8 @@ html.has-custom-cursor #foliobot {
         padding: 1.25rem;
         border-radius: 16px;
         color: #fff;
+        // Neutral base, so no accent colour flashes through while a screenshot fades in.
+        background: $charcoaldark;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
@@ -404,12 +406,32 @@ html.has-custom-cursor #foliobot {
         box-shadow: 0 20px 32px -12px rgba(0, 0, 0, 0.35);
     }
 
-    &.one a, &.one div { background: $colorOne; }
-    &.two a, &.two div { background: $colorTwo; }
-    &.three a, &.three div { background: $colorThree; }
-    &.four a, &.four div { background: $colorFour; }
-    &.five a, &.five div { background: $colorFive; }
-    &.six a, &.six div { background: $colorSix; }
+    // While the first screenshot loads: a shimmering skeleton. The screenshots stay hidden
+    // until then, then fade in (see .project-gallery).
+    &.is-loading a,
+    &.is-loading div {
+        background: linear-gradient(100deg, $charcoaldark 30%, #3d3d40 50%, $charcoaldark 70%);
+        background-size: 200% 100%;
+        animation: project-skeleton 2s linear infinite;
+    }
+
+    &.is-loading .project-gallery {
+        opacity: 0;
+    }
+
+    // The accent colour is only a fallback: no screenshots, or the first one failed to load.
+    &.is-fallback.one a, &.is-fallback.one div { background: $colorOne; }
+    &.is-fallback.two a, &.is-fallback.two div { background: $colorTwo; }
+    &.is-fallback.three a, &.is-fallback.three div { background: $colorThree; }
+    &.is-fallback.four a, &.is-fallback.four div { background: $colorFour; }
+    &.is-fallback.five a, &.is-fallback.five div { background: $colorFive; }
+    &.is-fallback.six a, &.is-fallback.six div { background: $colorSix; }
+}
+
+// 200% of the gradient tile per half-cycle, so the loop is seamless.
+@keyframes project-skeleton {
+    from { background-position: 200% 0; }
+    to { background-position: -200% 0; }
 }
 
 .project-item--wide {
@@ -432,6 +454,7 @@ html.has-custom-cursor #foliobot {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    transition: opacity 0.4s ease;
 
     &::-webkit-scrollbar {
         display: none;
@@ -520,6 +543,7 @@ html.has-custom-cursor #foliobot {
     .reveal,
     .stagger-item,
     .project-item a,
+    .project-gallery,
     .contact-email,
     .social-links a,
     .hero-links a,
@@ -531,6 +555,12 @@ html.has-custom-cursor #foliobot {
     .stagger-item {
         opacity: 1 !important;
         transform: none !important;
+    }
+
+    // Static placeholder instead of a moving shimmer.
+    .project-item.is-loading a,
+    .project-item.is-loading div {
+        animation: none;
     }
 
     // Auto-scroll itself is suppressed in JS when this preference is set;

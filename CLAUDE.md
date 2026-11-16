@@ -59,8 +59,12 @@ Cards are sorted at render time by rating count (score as tiebreaker), with unra
 
 Screenshots live under `images/work/<ProjectName>/N.jpg`; a logo (when set) goes under `images/logos/<name>.png`.
 
-Note: `initProjectColorShuffle()` randomly reassigns each project card's `one`–`five` (not `six`) color class every time the Work section scrolls into view — the `misc` value in the data is only the initial/fallback color, not a fixed per-project color.
+Note: `initProjectColorShuffle()` randomly reassigns each project card's `one`–`five` (not `six`) color class every time the Work section scrolls into view. Since the loading skeleton replaced the colored card background, that color is only visible on **fallback** cards (see below); `misc` is just the initial value.
+
+### Card Loading (skeleton)
+
+Cards render in the `is-loading` state: a neutral dark base with a shimmering skeleton (`@keyframes project-skeleton` in `_base.scss`), with the screenshots hidden. `watchProjectImages()` in `js/app.js` clears it when the card's first screenshot has loaded, and the gallery fades in. A card with no screenshots, or whose first screenshot fails to load, gets `is-fallback` and shows its accent color (`one`–`six`) instead, so a broken image never shimmers forever. `prefers-reduced-motion` turns the shimmer and fade off.
 
 ### Per-project Theming
 
-Accent colors are defined in `css/scss/_variables.scss` as `$colorOne`–`$colorSix` (`six` is reserved for the mWell brand blue and is not part of the shuffle pool). These colors are applied via the project card's `one`–`six` class to accents like the card name and shade overlay.
+Accent colors are defined in `css/scss/_variables.scss` as `$colorOne`–`$colorSix` (`six` is reserved for the mWell brand blue and is not part of the shuffle pool). They are applied through the card's `one`–`six` class, but only as the **fallback** background (`.is-fallback`) for cards with no screenshot or a failed image load; normal cards show their screenshot over a neutral base.
