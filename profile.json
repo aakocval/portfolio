@@ -87,9 +87,46 @@
       ],
       "stats": [
         "1M+ downloads",
-        "★ 4.6 (779 ratings)"
+        "★ 4.6 (788 ratings)"
       ],
       "link": "https://apps.apple.com/ph/app/mwell-ph-24-7-doctor-consult/id1540729485"
+    },
+    {
+      "name": "Olie",
+      "type": "app",
+      "description": "Turn any roster into calendar events.",
+      "role": "Joined the team to maintain and add new features.",
+      "stack": [
+        "Swift",
+        "SwiftUI",
+        "UIKit",
+        "Combine",
+        "MVVM-C",
+        "Alamofire",
+        "Firebase",
+        "In-app Purchase",
+        "Unit Testing"
+      ],
+      "stats": [
+        "★ 4.8 (17 ratings)"
+      ],
+      "link": "https://apps.apple.com/au/app/olie-roster-calendar/id6751304025"
+    },
+    {
+      "name": "Symptly",
+      "type": "app",
+      "description": "Track symptoms. Spot patterns. Feel better.",
+      "role": "Maintained and added new features.",
+      "stack": [
+        "SwiftUI",
+        "MVVM",
+        "Codable",
+        "In-app Purchase"
+      ],
+      "stats": [
+        "★ 4.9 (14 ratings)"
+      ],
+      "link": "https://apps.apple.com/au/app/symptly/id6751874212"
     },
     {
       "name": "Pinch",
@@ -125,22 +162,6 @@
       "link": "https://apps.apple.com/au/app/dyna/id6740112615"
     },
     {
-      "name": "Symptly",
-      "type": "app",
-      "description": "Track symptoms. Spot patterns. Feel better.",
-      "role": "Maintained and added new features.",
-      "stack": [
-        "SwiftUI",
-        "MVVM",
-        "Codable",
-        "In-app Purchase"
-      ],
-      "stats": [
-        "★ 4.9 (7 ratings)"
-      ],
-      "link": "https://apps.apple.com/au/app/symptly/id6751874212"
-    },
-    {
       "name": "Phoenix Live",
       "type": "app",
       "description": "Precision tools for modern agriculture.",
@@ -156,9 +177,33 @@
         "Unit Testing"
       ],
       "stats": [
-        "★ 4.3 (7 ratings)"
+        "★ 4.4 (8 ratings)"
       ],
       "link": "https://apps.apple.com/au/app/phoenix-live/id1503981683"
+    },
+    {
+      "name": "Salt Diary",
+      "type": "app",
+      "description": "The data-driven fishing diary.",
+      "role": "Helped build the app from its early stages, as part of a team.",
+      "stack": [
+        "Swift",
+        "SwiftUI",
+        "UIKit",
+        "Combine",
+        "MVVM-C",
+        "GRDB (SQLite)",
+        "Alamofire",
+        "Firebase",
+        "CoreLocation",
+        "MapKit",
+        "In-app Purchase",
+        "Unit Testing"
+      ],
+      "stats": [
+        "★ 5.0 (5 ratings)"
+      ],
+      "link": "https://apps.apple.com/au/app/salt-diary/id6780346074"
     },
     {
       "name": "CabinKeep",
@@ -175,15 +220,6 @@
         "★ 5.0 (2 ratings)"
       ],
       "link": "https://apps.apple.com/au/app/cabinkeep-house-management/id6755082635"
-    },
-    {
-      "name": "Olie",
-      "type": "app",
-      "description": "Turn any roster into calendar events.",
-      "stats": [
-        "★ 5.0 (2 ratings)"
-      ],
-      "link": "https://apps.apple.com/ph/app/olie-roster-calendar/id6751304025"
     },
     {
       "name": "Intro.u",
@@ -231,7 +267,10 @@
         "Alamofire",
         "Unit Testing"
       ],
-      "link": "https://apps.apple.com/us/app/zero2seventeen/id6739604370"
+      "stats": [
+        "★ 5.0 (1 rating)"
+      ],
+      "link": "https://apps.apple.com/au/app/zero2seventeen/id6739604370"
     },
     {
       "name": "TrackNav",
@@ -247,28 +286,51 @@
       "link": "https://apps.apple.com/au/app/tracknav/id6791431103"
     },
     {
-      "name": "Salt Diary",
+      "name": "CoNectar",
       "type": "app",
-      "description": "The data-driven fishing diary.",
-      "link": "https://apps.apple.com/ph/app/salt-diary/id6780346074"
+      "description": "Where communities become culture.",
+      "role": "Started the app from scratch as part of the MVP team, then maintained and added new features.",
+      "stack": [
+        "Swift",
+        "MVVM-C",
+        "Codable",
+        "Storyboard",
+        "Alamofire",
+        "Unit Testing"
+      ],
+      "link": "https://apps.apple.com/au/app/conectar/id6743191827"
     },
     {
       "name": "Clackey",
       "type": "website",
       "description": "Mechanical keyboard sounds for your MacBook.",
+      "role": "Built the free macOS menu-bar app and this browser demo, solo.",
+      "stack": [
+        "Swift",
+        "AppKit",
+        "AVFoundation",
+        "JavaScript",
+        "Web Audio API",
+        "GitHub Pages"
+      ],
       "link": "https://aakocval.github.io/clackey/"
     },
     {
       "name": "Virelto Tools",
       "type": "website",
       "description": "Free PDF tools that run entirely in your browser.",
+      "role": "Built solo.",
+      "stack": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "pdf-lib",
+        "PDF.js",
+        "Web Workers",
+        "Vercel"
+      ],
       "link": "https://virelto.vercel.app/"
-    },
-    {
-      "name": "Bizu",
-      "type": "website",
-      "description": "Online ordering for a patisserie and cafe.",
-      "link": "https://bizu.ph/"
     }
   ],
   "faqs": [

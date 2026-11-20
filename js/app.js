@@ -8,7 +8,7 @@ var projects = [
         icon: 'images/logos/mWell.png',
         screenshots: ['images/work/mWell/1.jpg', 'images/work/mWell/2.jpg', 'images/work/mWell/3.jpg', 'images/work/mWell/4.jpg', 'images/work/mWell/5.jpg', 'images/work/mWell/6.jpg'],
         misc: 'six',
-        rating: { score: 4.6, count: 779 },
+        rating: { score: 4.6, count: 788 },
         downloads: '1M+'
     },
     {
@@ -50,16 +50,17 @@ var projects = [
         link: 'https://apps.apple.com/au/app/symptly/id6751874212',
         screenshots: ['images/work/Symptly/1.jpg', 'images/work/Symptly/2.jpg', 'images/work/Symptly/3.jpg', 'images/work/Symptly/4.jpg', 'images/work/Symptly/5.jpg', 'images/work/Symptly/6.jpg'],
         misc: 'four',
-        rating: { score: 4.9, count: 7 }
+        rating: { score: 4.9, count: 14 }
     },
     {
         name: 'Zero2Seventeen',
         description: 'A marketplace for outgrown kids\' gear.',
         responsibilities: 'Started the app from scratch, maintained and added new features.',
         technology: 'Swift, MVVM-C, Storyboard, Alamofire, Unit Testing',
-        link: 'https://apps.apple.com/us/app/zero2seventeen/id6739604370',
+        link: 'https://apps.apple.com/au/app/zero2seventeen/id6739604370',
         screenshots: ['images/work/Zero2Seventeen/1.jpg', 'images/work/Zero2Seventeen/2.jpg', 'images/work/Zero2Seventeen/3.jpg', 'images/work/Zero2Seventeen/4.jpg'],
-        misc: 'five'
+        misc: 'five',
+        rating: { score: 5.0, count: 1 }
     },
     {
         name: 'Pinch',
@@ -100,26 +101,33 @@ var projects = [
         icon: 'images/logos/Phoenix Live.png',
         screenshots: ['images/work/PhoenixLive/1.jpg', 'images/work/PhoenixLive/2.jpg', 'images/work/PhoenixLive/3.jpg', 'images/work/PhoenixLive/4.jpg', 'images/work/PhoenixLive/5.jpg', 'images/work/PhoenixLive/6.jpg'],
         misc: 'four',
-        rating: { score: 4.3, count: 7 }
+        rating: { score: 4.4, count: 8 }
     },
     {
         name: 'Salt Diary',
         description: 'The data-driven fishing diary.',
-        link: 'https://apps.apple.com/ph/app/salt-diary/id6780346074',
+        responsibilities: 'Helped build the app from its early stages, as part of a team.',
+        technology: 'Swift, SwiftUI, UIKit, Combine, MVVM-C, GRDB (SQLite), Alamofire, Firebase, CoreLocation, MapKit, In-app Purchase, Unit Testing',
+        link: 'https://apps.apple.com/au/app/salt-diary/id6780346074',
         screenshots: ['images/work/SaltDiary/1.jpg', 'images/work/SaltDiary/2.jpg', 'images/work/SaltDiary/3.jpg', 'images/work/SaltDiary/4.jpg', 'images/work/SaltDiary/5.jpg'],
-        misc: 'three'
+        misc: 'three',
+        rating: { score: 5.0, count: 5 }
     },
     {
         name: 'Olie',
         description: 'Turn any roster into calendar events.',
-        link: 'https://apps.apple.com/ph/app/olie-roster-calendar/id6751304025',
+        responsibilities: 'Joined the team to maintain and add new features.',
+        technology: 'Swift, SwiftUI, UIKit, Combine, MVVM-C, Alamofire, Firebase, In-app Purchase, Unit Testing',
+        link: 'https://apps.apple.com/au/app/olie-roster-calendar/id6751304025',
         screenshots: ['images/work/Olie/1.jpg', 'images/work/Olie/2.jpg', 'images/work/Olie/3.jpg', 'images/work/Olie/4.jpg', 'images/work/Olie/5.jpg'],
         misc: 'five',
-        rating: { score: 5.0, count: 2 }
+        rating: { score: 4.8, count: 17 }
     },
     {
         name: 'Clackey',
         description: 'Mechanical keyboard sounds for your MacBook.',
+        responsibilities: 'Built the free macOS menu-bar app and this browser demo, solo.',
+        technology: 'Swift, AppKit, AVFoundation, JavaScript, Web Audio API, GitHub Pages',
         link: 'https://aakocval.github.io/clackey/',
         screenshots: ['images/work/Clackey/1.jpg'],
         wide: true,
@@ -128,18 +136,12 @@ var projects = [
     {
         name: 'Virelto Tools',
         description: 'Free PDF tools that run entirely in your browser.',
+        responsibilities: 'Built solo.',
+        technology: 'Next.js, React, TypeScript, Tailwind CSS, pdf-lib, PDF.js, Web Workers, Vercel',
         link: 'https://virelto.vercel.app/',
         screenshots: ['images/work/Virelto/1.jpg'],
         wide: true,
         misc: 'three'
-    },
-    {
-        name: 'Bizu',
-        description: 'Online ordering for a patisserie and cafe.',
-        link: 'https://bizu.ph/',
-        screenshots: ['images/work/Bizu/1.jpg'],
-        wide: true,
-        misc: 'two'
     }
 ];
 
